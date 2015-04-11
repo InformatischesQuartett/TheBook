@@ -1,33 +1,19 @@
 {
    "beliefName":"AnimalLover",
    "rule":"All animals are equal to us and must be protected.",
-   "associatedBeliefs":[
+   "associatedBeliefs":
       {
-         "WorshipCats":"1.0f"
+         "WorshipCats":"1.0",
+         "OnlyMeat":"-1.0",
+         "WorshipFish":"1.0",
+         "OnlyFruits":"1.0",
+		 "Farmer":"-1.0"
       },
-	  {
-         "OnlyMeat":"-1.0f"
-      },
+   "dialogues":
       {
-         "WorshipFish":"1.0f"
-      },
-	  {
-         "OnlyFruits":"1.0f"
-      },
-	  {
-         "Farmer":"-1.0f"
-      }
-   ],
-   "dialogues":[
-      {
-		"dialogueName":"AniD1",
-		"dialogueText":"Animals are defenseless and need to be protected!"
+		"AniD1":"Animals are defenseless and need to be protected!",
+		"AniD2":"Who are we to kill other living creatures?"
 	  },
-	  {
-		"dialogueName":"AniD2",
-		"dialogueText":"Who are we to kill other living creatures?"
-	  }	
-   ],
    "speeches":[
       "PLACEHOLDER1",
       "PLACEHOLDER2"

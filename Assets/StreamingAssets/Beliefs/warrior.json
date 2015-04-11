@@ -1,27 +1,17 @@
 {
    "beliefName":"Warrior",
    "rule":"War is good.",
-   "associatedBeliefs":[
+   "associatedBeliefs":
       {
-         "OnlyMeat":"1.0f"
+         "OnlyMeat":"1.0".
+         "Pacifist":"-1.0".
+         "Rogue":"-1.0"
       },
+   "dialogues":
       {
-         "Pacifist":"-1.0f"
-      },
-      {
-         "Rogue":"-1.0f"
-      }
-   ],
-   "dialogues":[
-      {
-		"dialogueName":"WarD1",
-		"dialogueText":"Blubb!"
+		"WarD1":"Blubb!",
+		"WarD2":"Blabb!"
 	  },
-	  {
-		"dialogueName":"WarD2",
-		"dialogueText":"Blabb!"
-	  }	  
-   ],
    "speeches":[
       "PLACEHOLDER1",
       "PLACEHOLDER2"
