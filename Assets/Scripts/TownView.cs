@@ -1,27 +1,30 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class TownView : MonoBehaviour {
 
-	private GameObject Town_Base;
-	private GameObject Town_FG;
-	private GameObject Town_BG;
+	public GameObject Town_Base { get; private set; }
 	private GameObject Player;
+	private GameObject[] ParallaxObjects;
+	private List<GameObject> ParallaxCameras;
 
 	// Use this for initialization
 	void Start () {
 		Town_Base = GameObject.Find ("Town_Base");
-		Town_FG = GameObject.Find ("Town_Front");
-		Town_BG = GameObject.Find ("Town_Back");
 		Player = GameObject.Find ("Player");
+		ParallaxObjects = GameObject.FindGameObjectsWithTag ("Parallax");
+
+		// Create cameras for parallax objects
+		//foreach (GameObject obj in ParallaxObjects){
+		//	ParallaxCameras.Add (new GameObject ());
+		//}
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		if (Town_FG != null)
-			TranslateParallax(Town_FG);
-		if (Town_BG != null)
-			TranslateParallax(Town_BG);
+		foreach(GameObject obj in ParallaxObjects)
+			TranslateParallax(obj);
 	}
 
 	void TranslateParallax(GameObject obj)
@@ -34,7 +37,7 @@ public class TownView : MonoBehaviour {
 		obj.transform.position = new Vector2(xPos, obj.transform.position.y);
 	}
 
-	float GetWidth(GameObject obj)
+	public float GetWidth(GameObject obj)
 	{
 		return obj.transform.localScale.x * obj.GetComponent<SpriteRenderer>().sprite.bounds.size.x;
 	}
