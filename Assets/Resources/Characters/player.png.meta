@@ -1,7 +1,7 @@
 fileFormatVersion: 2
 guid: 85556c17bde1e9748a8989a98987fb58
-timeCreated: 1428773653
-licenseType: Pro
+timeCreated: 1428789944
+licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
     21300000: player_0
@@ -33,9 +33,9 @@ TextureImporter:
   cubemapConvolutionExponent: 1.5
   seamlessCubemap: 0
   textureFormat: -1
-  maxTextureSize: 2048
+  maxTextureSize: 8192
   textureSettings:
-    filterMode: 0
+    filterMode: 1
     aniso: 16
     mipBias: -1
     wrapMode: 1
@@ -49,7 +49,7 @@ TextureImporter:
   alignment: 0
   spritePivot: {x: .5, y: .5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 1000
   alphaIsTransparency: 1
   textureType: 8
   buildTargetSettings: []
@@ -58,60 +58,60 @@ TextureImporter:
     - name: player_0
       rect:
         serializedVersion: 2
-        x: 23
-        y: 0
-        width: 229
-        height: 496
+        x: 111
+        y: 9
+        width: 444
+        height: 960
       alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: player_1
       rect:
         serializedVersion: 2
-        x: 302
-        y: 0
-        width: 228
-        height: 499
+        x: 718
+        y: 5
+        width: 441
+        height: 965
       alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: player_2
       rect:
         serializedVersion: 2
-        x: 585
-        y: 0
-        width: 241
-        height: 498
+        x: 1289
+        y: 6
+        width: 465
+        height: 962
       alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: player_3
       rect:
         serializedVersion: 2
-        x: 879
-        y: 0
-        width: 251
-        height: 495
+        x: 1875
+        y: 10
+        width: 482
+        height: 958
       alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: player_4
       rect:
         serializedVersion: 2
-        x: 1186
-        y: 0
-        width: 256
-        height: 491
+        x: 2507
+        y: 6
+        width: 489
+        height: 949
       alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: player_5
       rect:
         serializedVersion: 2
-        x: 1515
-        y: 0
-        width: 240
-        height: 490
+        x: 3151
+        y: 6
+        width: 443
+        height: 949
       alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
