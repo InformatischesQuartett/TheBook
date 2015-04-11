@@ -9,16 +9,11 @@
          "AnimalLover":"-1.0",
          "OnlyFruits":"-1.0"
       },
-   "dialogues":[
+   "dialogues":
       {
-		"dialogueName":"MeatD1",
-		"dialogueText":"Meat is life!"
+		"MeatD1":"Meat is life!",
+		"MeatD2":"Meat gives me all the nutritions I need."
 	  },
-	  {
-		"dialogueName":"MeatD2",
-		"dialogueText":"Meat gives me all the nutritions I need."
-	  }	  
-   ],
    "speeches":[
       "PLACEHOLDER1",
       "PLACEHOLDER2"

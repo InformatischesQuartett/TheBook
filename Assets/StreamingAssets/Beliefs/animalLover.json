@@ -9,16 +9,11 @@
          "OnlyFruits":"1.0",
 		 "Farmer":"-1.0"
       },
-   "dialogues":[
+   "dialogues":
       {
-		"dialogueName":"AniD1",
-		"dialogueText":"Animals are defenseless and need to be protected!"
+		"AniD1":"Animals are defenseless and need to be protected!",
+		"AniD2":"Who are we to kill other living creatures?"
 	  },
-	  {
-		"dialogueName":"AniD2",
-		"dialogueText":"Who are we to kill other living creatures?"
-	  }	
-   ],
    "speeches":[
       "PLACEHOLDER1",
       "PLACEHOLDER2"

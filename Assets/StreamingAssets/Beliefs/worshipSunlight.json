@@ -7,16 +7,11 @@
 		 "WorshipShadow":"-1.0",
 		 "Pacifist":"1.0"
 	  },
-   "dialogues":[
+   "dialogues":
 	  {
-		"dialogueName":"SunD1",
-		"dialogueText":"Sun is life!"
+		"SunD1":"Sun is life!",
+		"SunD2":"Praise the sun!"
 	  },
-	  {
-		"dialogueName":"SunD2",
-		"dialogueText":"Praise the sun!"
-	  }	  
-   ],
    "speeches":[
 	  "PLACEHOLDER1",
 	  "PLACEHOLDER2"

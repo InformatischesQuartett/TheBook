@@ -8,16 +8,11 @@
          "Rogue":"1.0",
          "Shaman":"1.0"
       },
-   "dialogues":[
+   "dialogues":
       {
-		"dialogueName":"SunD1",
-		"dialogueText":"Our skin is too delecate to be in the sun. The sun burns us and is just pure evil."
+		"SunD1":"Our skin is too delecate to be in the sun. The sun burns us and is just pure evil.",
+		"SunD2":"Shadow!"
 	  },
-	  {
-		"dialogueName":"SunD2",
-		"dialogueText":"Shadow!"
-	  }	  
-   ],
    "speeches":[
       "PLACEHOLDER1",
       "PLACEHOLDER2"

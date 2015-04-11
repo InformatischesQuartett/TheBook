@@ -10,16 +10,11 @@
          "Rogue":"-1.0",
          "WorshipShadow":"-1.0"
       },
-   "dialogues":[
+   "dialogues":
       {
-		"dialogueName":"PacD1",
-		"dialogueText":"You can not fight agression with war. Peace is the key."
+		"PacD1":"You can not fight agression with war. Peace is the key.",
+		"PacD2":"PACE!"
 	  },
-	  {
-		"dialogueName":"PacD2",
-		"dialogueText":"PACE!"
-	  }	 
-   ],
    "speeches":[
       "PLACEHOLDER1",
       "PLACEHOLDER2"

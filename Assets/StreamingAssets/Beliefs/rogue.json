@@ -8,16 +8,11 @@
          "OnlyMeat":"-1.0",
          "Warrior":"-1.0"
       },
-   "dialogues":[
+   "dialogues":
       {
-		"dialogueName":"RogD1",
-		"dialogueText":"My neighbor has enough food for my whole family - I don't care taking stuff from him."
+		"RogD1":"My neighbor has enough food for my whole family - I don't care taking stuff from him.",
+		"RogD2":"I don't want to talk with you."
 	  },
-	  {
-		"dialogueName":"RogD2",
-		"dialogueText":"I don't want to talk with you."
-	  }	  
-   ],
    "speeches":[
       "PLACEHOLDER1",
       "PLACEHOLDER2"

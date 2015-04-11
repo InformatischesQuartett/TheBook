@@ -7,16 +7,11 @@
          "Pacifist":"-1.0".
          "Rogue":"-1.0"
       },
-   "dialogues":[
+   "dialogues":
       {
-		"dialogueName":"WarD1",
-		"dialogueText":"Blubb!"
+		"WarD1":"Blubb!",
+		"WarD2":"Blabb!"
 	  },
-	  {
-		"dialogueName":"WarD2",
-		"dialogueText":"Blabb!"
-	  }	  
-   ],
    "speeches":[
       "PLACEHOLDER1",
       "PLACEHOLDER2"

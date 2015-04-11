@@ -7,16 +7,11 @@
 		 "WorshipSunlight":"1.0",
 		 "OnlyMeat":"-1.0"
       },
-   "dialogues":[
+   "dialogues":
       {
-		"dialogueName":"FruitD1",
-		"dialogueText":"FRUIT!"
+		"FruitD1":"FRUIT!",
+		"FruitD2":"Killing and eating living creatures is disgusting."
 	  },
-	  {
-		"dialogueName":"FruitD2",
-		"dialogueText":"Killing and eating living creatures is disgusting."
-	  }	  
-   ],
    "speeches":[
       "PLACEHOLDER1",
       "PLACEHOLDER2"
