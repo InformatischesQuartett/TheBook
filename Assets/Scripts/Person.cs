@@ -7,8 +7,10 @@ using System.Collections;
 /// </summary>
 public class Person {
 
-
-    private string HomeTown { get; set; }
+    /// <summary>
+    /// The town where the person lives. It influences in what the person believes in.
+    /// </summary>
+    private Town HomeTown { get; set; }
 
 
     /// <summary>
@@ -23,46 +25,57 @@ public class Person {
     /// </summary>
     private float Violent { get; set; }
 
-
     /// <summary>
     /// Defines how happe this person is. This value is influenced by the profets behavior and rules.
     /// A happy person is easier to handel, while unhappi / dissatisfied person is more likely to revolt / turn ageints the prophet
     /// </summary>
     private float Happines { get; set; }
 
-    private List<Rule> BelieveList; 
+    public bool IsFollower { get; private set; }
+
+    private List<Belief> BelieveList; 
 
     /// <summary>
     /// Constructor
     /// </summary>
-    public Person(string hometown)
+    public Person(Town town)
     {
-        this.HomeTown = hometown;
-        this.Controllable = ControllableViolent();
-        this.Violent = ControllableViolent();
+        this.HomeTown = town;
+        this.Controllable = InitControllableViolent();
+        this.Violent = InitControllableViolent();
         this.Happines = 70; // 70% Happy as std
-
-        //Randomlly picking 3 rules in respect of the hometown of the person
+        this.InitBeliveList();
+       
     }
 
     /// <summary>
     /// Creates a random number for the default character traits that don't change during the game
     /// </summary>
-    private float ControllableViolent()
+    private float InitControllableViolent()
     {
         return Random.Range(0, 100);
     }
 
+    private void InitBeliveList()
+    {
+        BelieveList = new List<Belief>();
+        //get belives for the persons hometown 
+        //pick randomly 3 of them (with a weight)
+    }
 
     /// <summary>
     /// Updates the mood of the person refering to the rules of "The Book"
     /// </summary>
     public void UpdateMood()
     {
-
+        //when there is an update in "The Book" -> chek how it is relating to the BelieveList  -> Happiness--, Happines++ ore neutral
+        foreach (var belive in BelieveList)
+        {
+            //look it up and change values
+        }
     }
 
-    //when there is an update in "The Book" -> chek how it is relating to the BelieveList  -> Happiness--, Happines++ ore neutral
+    
     
 
 }

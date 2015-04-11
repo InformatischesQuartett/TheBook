@@ -2,19 +2,22 @@
    "rule":"RULE TEXT",
    "associatedBeliefs":[
       {
-         "Farmer":"1.0f"
+         "OnlyFruits":"1.0f"
+      },
+	  {
+         "AnimalLover":"1.0f"
       },
       {
-         "Warrior":"1.0f"
+         "Warrior":"-1.0f"
       },
       {
-         "Pacifist":"-1.0f"
+         "OnlyMeat":"-1.0f"
       },
-      {
-         "AnimalLover":"-1.0f"
+	  {
+         "Rogue":"-1.0f"
       },
-      {
-         "OnlyFruits":"-1.0f"
+	  {
+         "WorshipShadow":"-1.0f"
       }
    ],
    "dialogues":[
