@@ -5,10 +5,10 @@
          "OnlyMeat":"1.0f"
       },
       {
-         "Pacifists":"-1.0f"
+         "Pacifist":"-1.0f"
       },
       {
-         "Rogues":"-1.0f"
+         "Rogue":"-1.0f"
       }
    ],
    "dialogues":[

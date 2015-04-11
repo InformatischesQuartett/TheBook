@@ -2,22 +2,16 @@
    "rule":"RULE TEXT",
    "associatedBeliefs":[
       {
-         "OnlyFruits":"1.0f"
+         "WorshipSunlight":"1.0f"
       },
 	  {
-         "AnimalLover":"1.0f"
+         "Shaman":"-1.0f"
       },
       {
-         "Warrior":"-1.0f"
+         "WorshipFish":"-1.0f"
       },
       {
-         "OnlyMeat":"-1.0f"
-      },
-	  {
          "Rogue":"-1.0f"
-      },
-	  {
-         "WorshipShadow":"-1.0f"
       }
    ],
    "dialogues":[
