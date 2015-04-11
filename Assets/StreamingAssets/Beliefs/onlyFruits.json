@@ -1,17 +1,12 @@
 {
    "beliefName":"OnlyFruits",
    "rule":"There shall be no other food than fruits - protect all living creatures",
-   "associatedBeliefs":[
+   "associatedBeliefs":
       {
-         "Farmer":"1.0f"
+         "Farmer":"1.0",
+		 "WorshipSunlight":"1.0",
+		 "OnlyMeat":"-1.0"
       },
-	  {
-         "WorshipSunlight":"1.0f"
-      },
-      {
-         "OnlyMeat":"-1.0f"
-      }
-   ],
    "dialogues":[
       {
 		"dialogueName":"FruitD1",

@@ -41,5 +41,11 @@ internal struct ConfigSet
 
 public struct BeliefSet
 {
-    public string rule;
+    public string beliefName;
+    public Dictionary<string, float> associatedBeliefs;
+}
+
+public struct BeliveAso
+{
+    
 }
