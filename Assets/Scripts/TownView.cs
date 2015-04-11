@@ -1,30 +1,29 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 
 public class TownView : MonoBehaviour {
 
 	public GameObject Town_Base { get; private set; }
 	private GameObject Player;
-	private GameObject[] ParallaxObjects;
-	private List<GameObject> ParallaxCameras;
+	private List<Transform> ParallaxObjects;
 
 	// Use this for initialization
 	void Start () {
 		Town_Base = GameObject.Find ("Town_Base");
 		Player = GameObject.Find ("Player");
-		ParallaxObjects = GameObject.FindGameObjectsWithTag ("Parallax");
-
-		// Create cameras for parallax objects
-		//foreach (GameObject obj in ParallaxObjects){
-		//	ParallaxCameras.Add (new GameObject ());
-		//}
+		//ParallaxObjects = GameObject.FindGameObjectsWithTag ("Parallax");
+		ParallaxObjects = this.GetComponentsInChildren<Transform> ().ToList();
+		ParallaxObjects.RemoveAt (0);
+		for (int i = 0; i < ParallaxObjects.Count; i++)
+			ParallaxObjects.ElementAt(i).gameObject.layer = LayerMask.NameToLayer("Parallax"+(i+1));
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		foreach(GameObject obj in ParallaxObjects)
-			TranslateParallax(obj);
+		foreach(var obj in ParallaxObjects)
+			TranslateParallax(obj.gameObject);
 	}
 
 	void TranslateParallax(GameObject obj)
@@ -40,5 +39,10 @@ public class TownView : MonoBehaviour {
 	public float GetWidth(GameObject obj)
 	{
 		return obj.transform.localScale.x * obj.GetComponent<SpriteRenderer>().sprite.bounds.size.x;
+	}
+
+	public int AmountOfParallax()
+	{
+		return ParallaxObjects.Count;
 	}
 }
