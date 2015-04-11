@@ -63,7 +63,7 @@ public class Person {
         for (int i = 0; i < numberBeliefs; i++)
         {
 
-            BelieveList.Add(HomeTown.GetBeliefs()[Random.Range(0,HomeTown.GetBeliefs().Count)]);
+            BelieveList.Add(HomeTown.GetBeliefs()[Random.Range(0,HomeTown.GetBeliefs().Count-1)]);
         }
         //get belives for the persons hometown 
         //pick randomly 3 of them (with a weight)
@@ -78,6 +78,7 @@ public class Person {
         foreach (var belive in BelieveList)
         {
             //look it up and change values
+            Debug.Log(BelieveList[0].associatedBeliefs);
         }
     }
 
