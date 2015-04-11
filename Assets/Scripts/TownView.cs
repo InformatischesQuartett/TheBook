@@ -3,13 +3,17 @@ using System.Collections;
 
 public class TownView : MonoBehaviour {
 
-	public GameObject Town_Base;
-	public GameObject Town_FG;
-	public GameObject Town_BG;
-	public GameObject Player;
+	private GameObject Town_Base;
+	private GameObject Town_FG;
+	private GameObject Town_BG;
+	private GameObject Player;
 
 	// Use this for initialization
 	void Start () {
+		Town_Base = GameObject.Find ("Town_Base");
+		Town_FG = GameObject.Find ("Town_Front");
+		Town_BG = GameObject.Find ("Town_Back");
+		Player = GameObject.Find ("Player");
 	}
 	
 	// Update is called once per frame
@@ -25,7 +29,6 @@ public class TownView : MonoBehaviour {
 		float width = GetWidth (obj);
 		float baseWidth = GetWidth (Town_Base);
 		float interval = (Player.transform.position.x / baseWidth) + 0.5f;
-		//float xPos = (0.5f - interval) * (width/2);
 		float overflow = (width - baseWidth) / 2;
 		float xPos = overflow - (interval * overflow * 2);
 		obj.transform.position = new Vector2(xPos, obj.transform.position.y);
