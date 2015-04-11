@@ -10,7 +10,8 @@ GameObject:
   - 4: {fileID: 454958}
   - 212: {fileID: 21295364}
   - 95: {fileID: 9544178}
-  m_Layer: 0
+  - 114: {fileID: 11495810}
+  m_Layer: 11
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24,8 +25,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 194896}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -.150000006, y: -1.34000003, z: 2.79999995}
+  m_LocalScale: {x: .270000011, y: .270000011, z: .270000011}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -46,6 +47,17 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &11495810
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 194896}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b7377eb873dfab4886c8574445cb6a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &21295364
 SpriteRenderer:
   m_ObjectHideFlags: 1
