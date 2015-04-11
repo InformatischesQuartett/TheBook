@@ -1,0 +1,51 @@
+[
+   {
+      "name":"OnlyMeat",
+      "ruleText":"There shall be no other food than meat."
+   },
+   {
+      "name":"Warrior",
+      "ruleText":"War is good."
+   },
+   {
+      "name":"Pacifist",
+      "ruleText":"War is evil."
+   },
+   {
+      "name":"WorshipCats",
+      "ruleText":"Cats are holy and you shall not harm them."
+   },
+   {
+      "name":"WorshipShadow",
+      "ruleText":"Sunlight is harmful and you must avoid it."
+   },
+   {
+      "name":"AnimalLover",
+      "ruleText":"All animals are equal and must be protected."
+   },
+   {
+      "name":"Farmer",
+      "ruleText":"You shall use the flora and fauna for your needs."
+   },
+   {
+      "name":"OnlyFruits",
+      "ruleText":"There shall be no other food than fruits - protect all living creatures."
+   },
+   {
+      "name":"Rogue",
+      "ruleText":"If you are in need you shall take from the others."
+   },
+   {
+      "name":"WorshipFish",
+      "ruleText":"Fish are holy and you shall not harm them."
+   },
+   {
+      "name":"Shaman",
+      "ruleText":"You shall use all fruits of nature for your magic to improve the living standards."
+   },
+   {
+      "name":"WorshipSunlight",
+      "ruleText":"Sunlight is the root of everything. Everybody shall bathe in it as much as possible."
+   }
+   
+]

@@ -9,7 +9,7 @@ using System.Runtime.Remoting;
 public class Rule
 {
     /**
-     * Enum for the states of a rule. Rules are always undiscovered till the player finds them by talking with the towns ppl.
+     * Enum for the states of a ruleText. Rules are always undiscovered till the player finds them by talking with the towns ppl.
      * After that they will be set to proposed and will be added to the book as proposals.
      * If the player accepts them, they are active.
      * If he deletes them, they are deleted.
@@ -22,7 +22,7 @@ public class Rule
         Deleted
     }
 
-    private readonly String _rule;
+    private readonly String _ruleText;
     private RuleState _state;
 
     public bool isActive
@@ -66,9 +66,9 @@ public class Rule
    /**
     * Constructor
     **/
-    Rule(String rule)
+    Rule(String ruleText)
     {
-        _rule = rule;
+        _ruleText = ruleText;
         _state = RuleState.Undiscovered;
     }
 
@@ -77,7 +77,7 @@ public class Rule
     **/
     public String getRule()
     {
-        return _rule;
+        return _ruleText;
     }
 	
 }

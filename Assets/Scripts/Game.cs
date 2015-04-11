@@ -8,23 +8,31 @@ using System.Collections;
 /// </summary>
 public class Game : MonoBehaviour {
 
-    private List<Town> Towns { get; set; }
+    private List<Town> _towns = new List<Town>();
+
+    public List<Town> GetTowns()
+    {
+        return _towns;
+    }
 
     void Awake(){
         Debug.Log("The Game");
         DontDestroyOnLoad(this.gameObject);
+        CreateTowns();
     }
 
     // Use this for initialization
 	void Start () {
-	    Towns = new List<Town>();
-	    CreateTowns();
+
+	    
 	}
 	
     private void CreateTowns()
     {
-        Towns.Add(new Town("Town A")); 
-        Towns.Add(new Town("Town B"));
-        Towns.Add(new Town("Town C"));
+        _towns.Add(new Town("Town A")); 
+        _towns.Add(new Town("Town B"));
+        _towns.Add(new Town("Town C"));
     }
+
+    
 }
