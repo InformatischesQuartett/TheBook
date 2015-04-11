@@ -19,19 +19,20 @@ public class CamScript : MonoBehaviour {
 		// Create cameras for parallax objects
 		var TownViewScript = GameObject.Find ("TownController").GetComponent<TownView>();
 
-		for (uint i = 1; i <= TownViewScript.AmountOfParallax(); i++){
-			GameObject newobj = new GameObject("autoCamera" + i, typeof(Camera));
+        var index = 1;
+        while (LayerMask.NameToLayer("Parallax" + index) != -1) {
+			GameObject newobj = new GameObject("autoCamera" + index, typeof(Camera));
 			var cam = newobj.GetComponent<Camera>();
 
             var color = cam.backgroundColor;
             color.a = 0;
             cam.backgroundColor = color;
 
-            if (i == 1)
+            if (index == 1)
                 cam.backgroundColor = BgColor;
 
 			cam.clearFlags = CameraClearFlags.SolidColor;
-			cam.cullingMask = (1 << LayerMask.NameToLayer("Parallax"+i));
+			cam.cullingMask = (1 << LayerMask.NameToLayer("Parallax"+index));
 			
 			RenderTexture rt = new RenderTexture(Screen.width, Screen.height, 24, RenderTextureFormat.ARGB32);
 			ParallaxTextures.Add(rt);
@@ -40,8 +41,9 @@ public class CamScript : MonoBehaviour {
 			cam.transform.parent = this.transform;
 			cam.transform.localPosition = new Vector3();
 			ParallaxCameras.Add (newobj);
-		}
 
+            index++;
+		}
 	}
 	
 	// Update is called once per frame

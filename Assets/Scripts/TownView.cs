@@ -30,12 +30,6 @@ public class TownView : MonoBehaviour {
         }
 
 	}
-	
-	// Update is called once per frame
-	void Update () {
-		//foreach(var obj in ParallaxObjects)
-		//	TranslateParallax(obj.gameObject);
-	}
 
 	void TranslateParallax(GameObject obj)
 	{
