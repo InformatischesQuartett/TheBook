@@ -1,0 +1,5 @@
+Value Explenation:
+	associatedBeliefs
+		(0...-1] = negative synergy
+		 0		 = neutral
+		(0... 1] = positive synergy

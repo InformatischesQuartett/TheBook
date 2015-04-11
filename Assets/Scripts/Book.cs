@@ -1,15 +1,29 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using System.Collections;
 
 public class Book : MonoBehaviour {
 
 	// Use this for initialization
-	void Start () {
+	void Start () 
+    {
 	
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void Update () 
+    {
 	
 	}
+
+    private void _activeRule(String key)
+    {
+        
+    }
+
+    void OnGUI()
+    {
+        
+        
+    }
 }

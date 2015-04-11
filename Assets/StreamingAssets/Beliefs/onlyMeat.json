@@ -1,0 +1,28 @@
+{
+   "rule":"RULE TEXT",
+   "associatedBeliefs":[
+      {
+         "Farmer":"1"
+      },
+      {
+         "Warriors":"1"
+      },
+      {
+         "Pacifists":"-1"
+      },
+      {
+         "AnimalLover":"-1"
+      },
+      {
+         "OnlyFruits":"-1"
+      }
+   ],
+   "dialogues":[
+      "PLACEHOLDER1",
+      "PLACEHOLDER2"
+   ],
+   "speeches":[
+      "PLACEHOLDER1",
+      "PLACEHOLDER2"
+   ]
+}
