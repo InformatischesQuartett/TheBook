@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
+using Random = UnityEngine.Random;
 using UnityEngine;
-using System.Collections;
+using Debug = UnityEngine.Debug;
 
 
 /// <summary>
@@ -24,8 +26,14 @@ public class Town {
     /// <summary>
     /// thisngs ppl believe in this town
     /// </summary>
-    private List<Belief> BeliefsList = new List<Belief>();
+    private List<BeliefSet> BeliefsList = new List<BeliefSet>();
 
+    public List<BeliefSet> GetBeliefs()
+    {
+        return this.BeliefsList;
+    }
+
+    private int _numberBelieves = 5;
 
     /// <summary>
     /// Inhabitants of this town, a List of Persons
@@ -56,8 +64,21 @@ public class Town {
     {
         this.Name = name;
         this.NumberInhabitants = 50; //TODO: dummy Value
-
+        InitBeliefs();
         InitInhabitants();
+    }
+
+    /// <summary>
+    /// Initialise the believes a town has
+    /// </summary>
+    private void InitBeliefs()
+    {
+        int size = Config.Beliefs.Count;
+
+        for (int i = 0; i < _numberBelieves; i++)
+        {
+            BeliefsList.Add(Config.Beliefs[Random.Range(0, size)]);
+        }
     }
 
     /// <summary>
