@@ -18,7 +18,6 @@ public class GUIStartScreenFunctions : MonoBehaviour
 
     public void Update()
     {
-        Debug.Log(_transitioning);
         if (_transitioning)
         {
             _titleCanvas.transform.Translate(_transitionSpeed*_direction, 0, 0);

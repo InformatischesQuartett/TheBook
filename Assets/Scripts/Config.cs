@@ -1,20 +1,35 @@
-﻿using System.IO;
+﻿using System.Collections.Generic;
+using System.IO;
 using Newtonsoft.Json;
 using UnityEngine;
 
 public static class Config
 {
-    private static readonly string _configPath = Application.streamingAssetsPath;
+    private static readonly string _configFile = Application.streamingAssetsPath + @"\config.json";
+    private static readonly string _beliefsPath = Application.streamingAssetsPath + @"\Beliefs";
     public static float CharacterWalkSpeed;
     public static float MenuTransitionSpeed;
+    public static List<BeliefSet> Beliefs { get; private set; }
+
 
     static Config()
     {
-        var configContent = File.ReadAllText(_configPath + "/config.json");
+        var configContent = File.ReadAllText(_configFile);
         var conf = JsonConvert.DeserializeObject<ConfigSet>(configContent);
 
         CharacterWalkSpeed = conf.CharacterWalkSpeed;
         MenuTransitionSpeed = conf.MenuTransitionSpeed;
+
+        Beliefs = new List<BeliefSet>();
+        foreach (string file in Directory.GetFiles(_beliefsPath))
+        {
+            if (file.EndsWith(".json"))
+            {
+                string filecontent = File.ReadAllText(file);
+                var belief = JsonConvert.DeserializeObject<BeliefSet>(filecontent);
+                Beliefs.Add(belief);
+            }
+        }
     }
 }
 
@@ -22,4 +37,9 @@ internal struct ConfigSet
 {
     public float CharacterWalkSpeed;
     public float MenuTransitionSpeed;
+}
+
+public struct BeliefSet
+{
+    public string rule;
 }
