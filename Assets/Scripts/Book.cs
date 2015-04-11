@@ -7,18 +7,28 @@ public class Book : MonoBehaviour {
 
     /*all rules that are in the book*/
     private List<String> ruleList = new List<String>();
-
-	// Use this for initialization
-	void Start () 
-    {
+    private Game _game;
+    private event EventHandler _updateBookEvent;
 	
+    // Use this for initialization
+	void Start ()
+	{
+	    _game = GameObject.Find("Game").GetComponent<Game>();
+
+	    foreach (var town in _game.GetTowns())
+	    {
+	        _updateBookEvent += town.OnUpdateBook;
+	    }
+        
 	}
 	
 	// Update is called once per frame
 	void Update () 
     {
-	
+
 	}
+
+
 
     private void _activeRule(String key)
     {
@@ -30,6 +40,13 @@ public class Book : MonoBehaviour {
 
     }
 
+    private void UpdateBook()
+    {
+        if (_updateBookEvent != null)
+        {
+            _updateBookEvent(this, new EventArgs());
+        }
+    }
 
     void OnGUI()
     {

@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using UnityEngine;
 using System.Collections;
 
@@ -74,7 +75,7 @@ public class Town {
     /// <summary>
     /// Is called to update the Moods of all ehe iunhabitants and the state of the town (IsConverted)
     /// </summary>
-    private void UpdateTown()
+    public void OnUpdateBook(object sender, EventArgs eventArgs)
     {
         //update the mood of all inhabitants
         foreach (var inhabitant in Inhabitants)
@@ -91,7 +92,7 @@ public class Town {
             }
         }
 
-        //sets IsConverted
+        // IsConverted
         if (Followers/Inhabitants.Count >= 0.7f)
         {
             IsConverted = true;
