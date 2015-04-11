@@ -18,7 +18,17 @@ public class CharacterController : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
 	{
-	    this.transform.Translate(Input.GetAxis("Horizontal") * speed, 0, 0);
+	    this.transform.Translate(Input.GetAxis("Horizontal") * speed * Time.deltaTime, 0, 0);
+
+        if (Input.GetAxis("Horizontal") != 0)
+            this.GetComponent<Animator>().SetBool("Walk", true);
+        else
+            this.GetComponent<Animator>().SetBool("Walk", false);
+
+        if (Input.GetAxis("Horizontal") < 0)
+            this.transform.localScale = new Vector3(-0.29f, 0.29f, 0.29f);
+        if (Input.GetAxis("Horizontal") > 0)
+            this.transform.localScale = new Vector3(0.29f, 0.29f, 0.29f);
 
 	    if (Input.GetAxis("Submit") != 0)
 	    {
@@ -36,27 +46,15 @@ public class CharacterController : MonoBehaviour
 	{
 		var script = townController.GetComponent<TownView>();
 		var camPos = camera.transform.position;
-		var newPos = new Vector3 (this.transform.position.x, this.transform.position.y, camPos.z);
+		var newPos = new Vector3 (this.transform.position.x, camera.transform.position.y, camPos.z);
 
 		var priorZ = Camera.main.WorldToScreenPoint (script.Town_Base.transform.position).z;
 		var leftBaseScreen = Camera.main.WorldToScreenPoint (script.Town_Base.transform.position + script.GetWidth (script.Town_Base) / 2 * Vector3.left);
 		var rightBaseScreen = Camera.main.WorldToScreenPoint (script.Town_Base.transform.position + script.GetWidth (script.Town_Base) / 2 * Vector3.right);
-		//Vector3 ll = Camera.main.ScreenToWorldPoint(new Vector3(0, 0, priorZ));
-		//Vector3 ur = Camera.main.ScreenToWorldPoint(new Vector3(Camera.main.pixelWidth, Camera.main.pixelHeight, priorZ));
-		//float camWidth = Mathf.Abs (ll.x - ur.x);
 		var camWorldWidth = Camera.main.ScreenToWorldPoint (new Vector3(leftBaseScreen.x, leftBaseScreen.y, 0));
 
-		if ((leftBaseScreen.x < 0 || newPos.x > camera.transform.position.x) && (rightBaseScreen.x > Screen.width ||  newPos.x < camera.transform.position.x)) {
-			camera.transform.position = new Vector3(this.transform.position.x, this.transform.position.y, camPos.z);
+		if ((leftBaseScreen.x < 0 || newPos.x > camera.transform.position.x) && (rightBaseScreen.x > Screen.width ||  newPos.x < GetComponent<Camera>().transform.position.x)) {
+			camera.transform.position = new Vector3(this.transform.position.x, camera.transform.position.y, camPos.z);
 		}
-
-//		if (ll.x < -script.GetWidth (script.Town_Base) / 2)
-//		{
-//			camera.transform.position = new Vector3((-script.GetWidth (script.Town_Base) / 2)/* + camWidth / 2*/, this.transform.position.y, camPos.z);
-//		}
-//		if (ur.x > script.GetWidth (script.Town_Base) / 2)
-//		{
-//			camera.transform.position = new Vector3((script.GetWidth (script.Town_Base) / 2) - camWidth / 2, this.transform.position.y, camPos.z);
-//		}
 	}
 }
