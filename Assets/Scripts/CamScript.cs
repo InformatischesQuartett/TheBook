@@ -23,7 +23,7 @@ public class CamScript : MonoBehaviour {
 			var color = cam.backgroundColor;
 			color.a = 0;
 			cam.backgroundColor = color;
-			cam.orthographic = true;
+			//cam.orthographic = true;
 			cam.clearFlags = CameraClearFlags.SolidColor;
 			cam.cullingMask = (1 << LayerMask.NameToLayer("Parallax"+i));
 			
