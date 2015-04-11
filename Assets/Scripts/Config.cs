@@ -6,6 +6,7 @@ public static class Config
 {
     private static readonly string _configPath = Application.streamingAssetsPath;
     public static float CharacterWalkSpeed;
+    public static float MenuTransitionSpeed;
 
     static Config()
     {
@@ -13,10 +14,12 @@ public static class Config
         var conf = JsonConvert.DeserializeObject<ConfigSet>(configContent);
 
         CharacterWalkSpeed = conf.CharacterWalkSpeed;
+        MenuTransitionSpeed = conf.MenuTransitionSpeed;
     }
 }
 
 internal struct ConfigSet
 {
     public float CharacterWalkSpeed;
+    public float MenuTransitionSpeed;
 }
