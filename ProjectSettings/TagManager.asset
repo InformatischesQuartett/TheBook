@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Smoke
+  - Parallax
   layers:
   - Default
   - TransparentFX
@@ -14,11 +15,11 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Parallax1
+  - Parallax2
+  - Parallax3
+  - Parallax4
+  - Parallax5
   - 
   - 
   - 

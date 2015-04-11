@@ -37,7 +37,7 @@ public class CharacterController : MonoBehaviour
 		var script = townController.GetComponent<TownView>();
 		camera.transform.position = new Vector3(this.transform.position.x, this.transform.position.y, -10);
 
-		Vector3 ll = Camera.main.ScreenToWorldPoint(new Vector3(0, 0, 0));
+		Vector3 ll = Camera.main.ScreenToWorldPoint(new Vector3(0, 0, script.Town_Base.transform.position.z -10));
 		Vector3 ur = Camera.main.ScreenToWorldPoint(new Vector3(Camera.main.pixelWidth, Camera.main.pixelHeight, 0));
 		float camWidth = Mathf.Abs (ll.x - ur.x);
 
