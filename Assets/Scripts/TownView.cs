@@ -12,12 +12,24 @@ public class TownView : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		Town_Base = GameObject.FindGameObjectWithTag ("Base");
+        var distToCam = Camera.main.transform.position.z - Town_Base.transform.position.z;
+
 		Player = GameObject.Find ("Player");
-		//ParallaxObjects = GameObject.FindGameObjectsWithTag ("Parallax");
+
 		ParallaxObjects = this.GetComponentsInChildren<Transform> ().ToList();
 		ParallaxObjects.RemoveAt (0);
-		for (int i = 0; i < ParallaxObjects.Count; i++)
-			ParallaxObjects.ElementAt(i).gameObject.layer = LayerMask.NameToLayer("Parallax"+(i+1));
+
+        for (int i = 0; i < ParallaxObjects.Count; i++)
+        {
+            var go = ParallaxObjects.ElementAt(i).gameObject;
+            go.layer = LayerMask.NameToLayer("Parallax" + (i + 1));
+
+            var tmpDist = Camera.main.transform.position.z - go.transform.position.z;
+            var diff = tmpDist / distToCam;
+
+            go.transform.localScale *= diff; 
+        }
+
 	}
 	
 	// Update is called once per frame

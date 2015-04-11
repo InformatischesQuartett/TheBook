@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Smoke
   - Parallax
+  - Base
   layers:
   - Default
   - TransparentFX

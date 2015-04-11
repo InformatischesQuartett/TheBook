@@ -4,7 +4,9 @@ using System.Collections.Generic;
 
 public class CamScript : MonoBehaviour {
 
-    public Material mat;
+    public Color BgColor;
+
+    private Material mat;
 	private List<GameObject> ParallaxCameras;
 	private List<RenderTexture> ParallaxTextures;
 
@@ -20,10 +22,14 @@ public class CamScript : MonoBehaviour {
 		for (uint i = 1; i <= TownViewScript.AmountOfParallax(); i++){
 			GameObject newobj = new GameObject("autoCamera" + i, typeof(Camera));
 			var cam = newobj.GetComponent<Camera>();
-			var color = cam.backgroundColor;
-			color.a = 0;
-			cam.backgroundColor = color;
-			//cam.orthographic = true;
+
+            var color = cam.backgroundColor;
+            color.a = 0;
+            cam.backgroundColor = color;
+
+            if (i == 1)
+                cam.backgroundColor = BgColor;
+
 			cam.clearFlags = CameraClearFlags.SolidColor;
 			cam.cullingMask = (1 << LayerMask.NameToLayer("Parallax"+i));
 			
