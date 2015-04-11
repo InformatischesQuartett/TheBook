@@ -1,6 +1,6 @@
 {
    "beliefName":"Pacifist",
-   "rule":""War is evil."",
+   "rule":"War is evil.",
    "associatedBeliefs":
       {
          "OnlyFruits":"1.0",
