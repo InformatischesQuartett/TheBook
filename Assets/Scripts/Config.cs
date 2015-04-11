@@ -31,8 +31,8 @@ public static class Config
             if (file.EndsWith(".json"))
             {
                 string filecontent = File.ReadAllText(file);
-                //var belief = JsonConvert.DeserializeObject<BeliefSet>(filecontent);
-                //Beliefs.Add(belief);
+                var belief = JsonConvert.DeserializeObject<BeliefSet>(filecontent);
+                Beliefs.Add(belief);
             }
         }
     }
@@ -48,7 +48,11 @@ internal struct ConfigSet
 public struct BeliefSet
 {
     public string beliefName;
+    public string rule;
     public Dictionary<string, float> associatedBeliefs;
+    public Dictionary<string, string> dialogues;
+    //TODO: speeches
+
 }
 
 public struct BeliveAso
