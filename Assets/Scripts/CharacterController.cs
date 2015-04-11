@@ -25,6 +25,5 @@ public class CharacterController : MonoBehaviour
 	    {
 	        Debug.Log("Cancel");
 	    }
-        Debug.Log(Input.GetAxis("Mouse X"));
 	}
 }
