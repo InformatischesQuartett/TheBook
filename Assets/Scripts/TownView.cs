@@ -11,7 +11,7 @@ public class TownView : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		Town_Base = GameObject.Find ("Town_Base");
+		Town_Base = GameObject.FindGameObjectWithTag ("Base");
 		Player = GameObject.Find ("Player");
 		//ParallaxObjects = GameObject.FindGameObjectsWithTag ("Parallax");
 		ParallaxObjects = this.GetComponentsInChildren<Transform> ().ToList();
