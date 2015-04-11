@@ -7,7 +7,9 @@ using System.Collections;
 /// </summary>
 public class Person {
 
-
+    /// <summary>
+    /// The town where the person lives. It influences in what the person believes in.
+    /// </summary>
     private string HomeTown { get; set; }
 
 
@@ -38,31 +40,40 @@ public class Person {
     public Person(string hometown)
     {
         this.HomeTown = hometown;
-        this.Controllable = ControllableViolent();
-        this.Violent = ControllableViolent();
+        this.Controllable = InitControllableViolent();
+        this.Violent = InitControllableViolent();
         this.Happines = 70; // 70% Happy as std
-
-        //Randomlly picking 3 rules in respect of the hometown of the person
+        this.InitBeliveList();
+       
     }
 
     /// <summary>
     /// Creates a random number for the default character traits that don't change during the game
     /// </summary>
-    private float ControllableViolent()
+    private float InitControllableViolent()
     {
         return Random.Range(0, 100);
     }
 
+    private void InitBeliveList()
+    {
+        //get belives for the persons hometown 
+        //pick randomly 3 of them (with a weight)
+    }
 
     /// <summary>
     /// Updates the mood of the person refering to the rules of "The Book"
     /// </summary>
     public void UpdateMood()
     {
-
+        //when there is an update in "The Book" -> chek how it is relating to the BelieveList  -> Happiness--, Happines++ ore neutral
+        foreach (var belive in BelieveList)
+        {
+            //look it up and change values
+        }
     }
 
-    //when there is an update in "The Book" -> chek how it is relating to the BelieveList  -> Happiness--, Happines++ ore neutral
+    
     
 
 }
