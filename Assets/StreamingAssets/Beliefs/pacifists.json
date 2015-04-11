@@ -1,36 +1,20 @@
 {
    "beliefName":"Pacifist",
    "rule":""War is evil."",
-   "associatedBeliefs":[
+   "associatedBeliefs":
       {
-         "OnlyFruits":"1.0f"
+         "OnlyFruits":"1.0",
+         "AnimalLover":"1.0",
+         "Warrior":"-1.0",
+         "OnlyMeat":"-1.0",
+         "Rogue":"-1.0",
+         "WorshipShadow":"-1.0"
       },
-	  {
-         "AnimalLover":"1.0f"
-      },
+   "dialogues":
       {
-         "Warrior":"-1.0f"
-      },
-      {
-         "OnlyMeat":"-1.0f"
-      },
-	  {
-         "Rogue":"-1.0f"
-      },
-	  {
-         "WorshipShadow":"-1.0f"
-      }
-   ],
-   "dialogues":[
-      {
-		"dialogueName":"PacD1",
-		"dialogueText":"You can not fight agression with war. Peace is the key."
+		"PacD1":"You can not fight agression with war. Peace is the key.",
+		"PacD2":"PACE!"
 	  },
-	  {
-		"dialogueName":"PacD2",
-		"dialogueText":"PACE!"
-	  }	 
-   ],
    "speeches":[
       "PLACEHOLDER1",
       "PLACEHOLDER2"

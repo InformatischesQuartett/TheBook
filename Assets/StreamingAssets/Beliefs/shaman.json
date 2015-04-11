@@ -1,25 +1,16 @@
 {
    "beliefName":"Shaman",
    "rule":"You shall use all fruits of nature for your magic to improve the living standards.",
-   "associatedBeliefs":[
+   "associatedBeliefs":
       {
-         "WorshipShadow":"1.0f"
+         "WorshipShadow":"1.0",
+		 "WorshipSunlight":"-1.0"
       },
-      
+   "dialogues":
       {
-         "WorshipSunlight":"-1.0f"
-      }
-   ],
-   "dialogues":[
-      {
-		"dialogueName":"ShamD1",
-		"dialogueText":"I can make you a potion that helps you with that beard of yours."
+		"ShamD1":"I can make you a potion that helps you with that beard of yours.",
+		"ShamD2":"Sacrificing an animal after midnight gives me more power that before this ghostly hour."
 	  },
-	  {
-		"dialogueName":"ShamD2",
-		"dialogueText":"Sacrificing an animal after midnight gives me more power that before this ghostly hour."
-	  }	  
-   ],
    "speeches":[
       "PLACEHOLDER1",
       "PLACEHOLDER2"

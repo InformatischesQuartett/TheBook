@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
-using System.Collections;
+
 
 /// <summary>
 /// This datatype represents a Person in the game
@@ -33,7 +33,8 @@ public class Person {
 
     public bool IsFollower { get; private set; }
 
-    private List<Belief> BelieveList; 
+    private List<BeliefSet> BelieveList;
+    private int numberBeliefs;
 
     /// <summary>
     /// Constructor
@@ -45,7 +46,7 @@ public class Person {
         this.Violent = InitControllableViolent();
         this.Happines = 70; // 70% Happy as std
         this.InitBeliveList();
-       
+        this.numberBeliefs = 3;
     }
 
     /// <summary>
@@ -58,7 +59,12 @@ public class Person {
 
     private void InitBeliveList()
     {
-        BelieveList = new List<Belief>();
+        BelieveList = new List<BeliefSet>();
+        for (int i = 0; i < numberBeliefs; i++)
+        {
+
+            BelieveList.Add(HomeTown.GetBeliefs()[Random.Range(0,HomeTown.GetBeliefs().Count-1)]);
+        }
         //get belives for the persons hometown 
         //pick randomly 3 of them (with a weight)
     }
@@ -72,6 +78,7 @@ public class Person {
         foreach (var belive in BelieveList)
         {
             //look it up and change values
+            Debug.Log(BelieveList[0].associatedBeliefs);
         }
     }
 
