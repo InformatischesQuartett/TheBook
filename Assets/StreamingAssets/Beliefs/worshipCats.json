@@ -1,20 +1,13 @@
 {
    "beliefName":"WorshipCats",
    "rule":"Cats are the descendants of the gods.",
-   "associatedBeliefs":[
+   "associatedBeliefs":
       {
-         "WorshipSunlight":"1.0f"
+         "WorshipSunlight":"1.0",
+         "Shaman":"-1.0",
+         "WorshipFish":"-1.0",
+         "Rogue":"-1.0"
       },
-	  {
-         "Shaman":"-1.0f"
-      },
-      {
-         "WorshipFish":"-1.0f"
-      },
-      {
-         "Rogue":"-1.0f"
-      }
-   ],
    "dialogues":[
       {
 		"dialogueName":"CatD1",

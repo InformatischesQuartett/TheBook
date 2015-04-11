@@ -1,26 +1,15 @@
 {
    "beliefName":"Pacifist",
    "rule":""War is evil."",
-   "associatedBeliefs":[
+   "associatedBeliefs":
       {
-         "OnlyFruits":"1.0f"
+         "OnlyFruits":"1.0",
+         "AnimalLover":"1.0",
+         "Warrior":"-1.0",
+         "OnlyMeat":"-1.0",
+         "Rogue":"-1.0",
+         "WorshipShadow":"-1.0"
       },
-	  {
-         "AnimalLover":"1.0f"
-      },
-      {
-         "Warrior":"-1.0f"
-      },
-      {
-         "OnlyMeat":"-1.0f"
-      },
-	  {
-         "Rogue":"-1.0f"
-      },
-	  {
-         "WorshipShadow":"-1.0f"
-      }
-   ],
    "dialogues":[
       {
 		"dialogueName":"PacD1",

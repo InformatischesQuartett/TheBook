@@ -1,20 +1,13 @@
 {
    "beliefName":"Rogue",
    "rule":"If you are in need you shall take from the others.",
-   "associatedBeliefs":[
+   "associatedBeliefs":
       {
-         "Shaman":"1.0f"
+         "Shaman":"1.0",
+         "WorshipSunlight":"-1.0",
+         "OnlyMeat":"-1.0",
+         "Warrior":"-1.0"
       },
-	  {
-         "WorshipSunlight":"-1.0f"
-      },
-      {
-         "OnlyMeat":"-1.0f"
-      },
-	  {
-         "Warrior":"-1.0f"
-      }
-   ],
    "dialogues":[
       {
 		"dialogueName":"RogD1",

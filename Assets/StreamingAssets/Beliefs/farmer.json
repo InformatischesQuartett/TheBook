@@ -1,20 +1,13 @@
 {
    "beliefName":"Farmer",
    "rule":"You shall use the flora and fauna for your needs.",
-   "associatedBeliefs":[
+   "associatedBeliefs":
       {
-         "AnimalLover":"-1.0f"
+         "AnimalLover":"-1.0",
+         "WorshipSunlight":"1.0",
+         "OnlyMeat":"1.0",
+		 "OnlyFruits":"1.0"
       },
-	  {
-         "WorshipSunlight":"1.0f"
-      },
-      {
-         "OnlyMeat":"1.0f"
-      },
-	  {
-         "OnlyFruits":"1.0f"
-      }
-   ],
    "dialogues":[
       {
 		"dialogueName":"farmD1",

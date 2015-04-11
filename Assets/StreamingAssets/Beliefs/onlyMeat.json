@@ -1,23 +1,14 @@
 {
    "beliefName":"OnlyMeat",
    "rule":"There shall be no other food than meat.",
-   "associatedBeliefs":[
+   "associatedBeliefs":
       {
-         "Farmer":"1.0f"
+         "Farmer":"1.0",
+         "Warrior":"1.0",
+         "Pacifist":"-1.0",
+         "AnimalLover":"-1.0",
+         "OnlyFruits":"-1.0"
       },
-      {
-         "Warrior":"1.0f"
-      },
-      {
-         "Pacifist":"-1.0f"
-      },
-      {
-         "AnimalLover":"-1.0f"
-      },
-      {
-         "OnlyFruits":"-1.0f"
-      }
-   ],
    "dialogues":[
       {
 		"dialogueName":"MeatD1",

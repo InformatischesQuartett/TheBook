@@ -1,17 +1,12 @@
 {
    "beliefName":"WorshipFish",
    "rule":"Fish are holy and you shall not harm them.",
-   "associatedBeliefs":[
+   "associatedBeliefs":
       {
-         "WorshipCats":"-1.0f"
+         "WorshipCats":"-1.0",
+         "Shaman":"-1.0",
+         "WorshipSunlight":"1.0"
       },
-      {
-         "Shaman":"-1.0f"
-      },
-      {
-         "WorshipSunlight":"1.0f"
-      }
-   ],
    "dialogues":[
       {
 		"dialogueName":"FishD1",

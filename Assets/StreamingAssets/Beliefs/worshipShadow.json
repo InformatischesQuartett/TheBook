@@ -1,20 +1,13 @@
 {
    "beliefName":"WorshipShadow",
    "rule":"Sunlight is harmful and you must avoid it.",
-   "associatedBeliefs":[
+   "associatedBeliefs":
       {
-         "WorshipSunlight":"-1.0f"
+         "WorshipSunlight":"-1.0",
+         "Pacifist":"-1.0",
+         "Rogue":"1.0",
+         "Shaman":"1.0"
       },
-	  {
-         "Pacifist":"-1.0f"
-      },
-      {
-         "Rogue":"1.0f"
-      },
-	  {
-         "Shaman":"1.0f"
-      }
-   ],
    "dialogues":[
       {
 		"dialogueName":"SunD1",
