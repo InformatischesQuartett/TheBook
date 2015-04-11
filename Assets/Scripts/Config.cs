@@ -26,8 +26,8 @@ public static class Config
             if (file.EndsWith(".json"))
             {
                 string filecontent = File.ReadAllText(file);
-                var belief = JsonConvert.DeserializeObject<BeliefSet>(filecontent);
-                Beliefs.Add(belief);
+                //var belief = JsonConvert.DeserializeObject<BeliefSet>(filecontent);
+                //Beliefs.Add(belief);
             }
         }
     }
