@@ -10,7 +10,7 @@ public class Person {
     /// <summary>
     /// The town where the person lives. It influences in what the person believes in.
     /// </summary>
-    private string HomeTown { get; set; }
+    private Town HomeTown { get; set; }
 
 
     /// <summary>
@@ -25,21 +25,22 @@ public class Person {
     /// </summary>
     private float Violent { get; set; }
 
-
     /// <summary>
     /// Defines how happe this person is. This value is influenced by the profets behavior and rules.
     /// A happy person is easier to handel, while unhappi / dissatisfied person is more likely to revolt / turn ageints the prophet
     /// </summary>
     private float Happines { get; set; }
 
-    private List<Rule> BelieveList; 
+    public bool IsFollower { get; private set; }
+
+    private List<Belief> BelieveList; 
 
     /// <summary>
     /// Constructor
     /// </summary>
-    public Person(string hometown)
+    public Person(Town town)
     {
-        this.HomeTown = hometown;
+        this.HomeTown = town;
         this.Controllable = InitControllableViolent();
         this.Violent = InitControllableViolent();
         this.Happines = 70; // 70% Happy as std
@@ -57,6 +58,7 @@ public class Person {
 
     private void InitBeliveList()
     {
+        BelieveList = new List<Belief>();
         //get belives for the persons hometown 
         //pick randomly 3 of them (with a weight)
     }
