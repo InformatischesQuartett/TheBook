@@ -1,0 +1,25 @@
+{
+   "rule":"RULE TEXT",
+   "associatedBeliefs":[
+      {
+         "WorshipSunlight":"-1.0f"
+      },
+	  {
+         "Pacifist":"-1.0f"
+      },
+      {
+         "Rogue":"1.0f"
+      },
+	  {
+         "Shaman":"1.0f"
+      }
+   ],
+   "dialogues":[
+      "PLACEHOLDER1",
+      "PLACEHOLDER2"
+   ],
+   "speeches":[
+      "PLACEHOLDER1",
+      "PLACEHOLDER2"
+   ]
+}
