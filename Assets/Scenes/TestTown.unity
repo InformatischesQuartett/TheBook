@@ -640,6 +640,7 @@ GameObject:
   - 124: {fileID: 1480874289}
   - 81: {fileID: 1480874288}
   - 114: {fileID: 1480874293}
+  - 114: {fileID: 1480874294}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -724,6 +725,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BgColor: {r: .676470578, g: .676470578, b: .676470578, a: 1}
+--- !u!114 &1480874294
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1480874287}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34382083ad114a07d000fbfb8d76c639, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  iterations: 2
+  blurSpread: .600000024
+  blurShader: {fileID: 4800000, guid: 57e6deea7c2924e22a5138e2b70bb4dc, type: 3}
 --- !u!1 &1576376418
 GameObject:
   m_ObjectHideFlags: 0
