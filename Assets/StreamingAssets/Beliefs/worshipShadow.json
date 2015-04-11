@@ -1,5 +1,6 @@
 {
-   "rule":"RULE TEXT",
+   "beliefName":"WorshipShadow",
+   "rule":"Sunlight is harmful and you must avoid it.",
    "associatedBeliefs":[
       {
          "WorshipSunlight":"-1.0f"
@@ -15,8 +16,14 @@
       }
    ],
    "dialogues":[
-      "PLACEHOLDER1",
-      "PLACEHOLDER2"
+      {
+		"dialogueName":"SunD1",
+		"dialogueText":"Our skin is too delecate to be in the sun. The sun burns us and is just pure evil."
+	  },
+	  {
+		"dialogueName":"SunD2",
+		"dialogueText":"Shadow!"
+	  }	  
    ],
    "speeches":[
       "PLACEHOLDER1",

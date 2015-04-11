@@ -1,5 +1,6 @@
 {
-   "rule":"RULE TEXT",
+   "beliefName":"WorshipFish",
+   "rule":"Fish are holy and you shall not harm them.",
    "associatedBeliefs":[
       {
          "WorshipCats":"-1.0f"
@@ -12,8 +13,14 @@
       }
    ],
    "dialogues":[
-      "PLACEHOLDER1",
-      "PLACEHOLDER2"
+      {
+		"dialogueName":"FishD1",
+		"dialogueText":"Praise the fish!"
+	  },
+	  {
+		"dialogueName":"FishD2",
+		"dialogueText":"Fish!"
+	  }	  
    ],
    "speeches":[
       "PLACEHOLDER1",

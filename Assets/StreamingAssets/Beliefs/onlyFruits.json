@@ -1,5 +1,6 @@
 {
-   "rule":"RULE TEXT",
+   "beliefName":"OnlyFruits",
+   "rule":"There shall be no other food than fruits - protect all living creatures",
    "associatedBeliefs":[
       {
          "Farmer":"1.0f"
@@ -12,8 +13,14 @@
       }
    ],
    "dialogues":[
-      "PLACEHOLDER1",
-      "PLACEHOLDER2"
+      {
+		"dialogueName":"FruitD1",
+		"dialogueText":"FRUIT!"
+	  },
+	  {
+		"dialogueName":"FruitD2",
+		"dialogueText":"Killing and eating living creatures is disgusting."
+	  }	  
    ],
    "speeches":[
       "PLACEHOLDER1",

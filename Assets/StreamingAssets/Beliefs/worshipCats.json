@@ -1,5 +1,6 @@
 {
-   "rule":"RULE TEXT",
+   "beliefName":"WorshipCats",
+   "rule":"Cats are the descendants of the gods.",
    "associatedBeliefs":[
       {
          "WorshipSunlight":"1.0f"
@@ -15,8 +16,14 @@
       }
    ],
    "dialogues":[
-      "PLACEHOLDER1",
-      "PLACEHOLDER2"
+      {
+		"dialogueName":"CatD1",
+		"dialogueText":"Cats are the descendants of the gods."
+	  },
+	  {
+		"dialogueName":"CatD2",
+		"dialogueText":"Cats!"
+	  }	  
    ],
    "speeches":[
       "PLACEHOLDER1",
