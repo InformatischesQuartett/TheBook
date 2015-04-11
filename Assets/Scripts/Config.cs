@@ -7,14 +7,17 @@ public static class Config
 {
     private static readonly string _configFile = Application.streamingAssetsPath + @"\config.json";
     private static readonly string _beliefsPath = Application.streamingAssetsPath + @"\Beliefs";
-    public static float CharacterWalkSpeed;
-    public static float MenuTransitionSpeed;
-    public static float MapMouseEmulationSpeed;
+    public static float CharacterWalkSpeed { get; private set; }
+    public static float MenuTransitionSpeed { get; private set; }
+    public static float MapMouseEmulationSpeed { get; private set; }
+    public static Texture2D Cursor { get; private set; }
     public static List<BeliefSet> Beliefs { get; private set; }
 
 
     static Config()
     {
+        Cursor = (Texture2D)Resources.Load("cursor");
+
         var configContent = File.ReadAllText(_configFile);
         var conf = JsonConvert.DeserializeObject<ConfigSet>(configContent);
 
