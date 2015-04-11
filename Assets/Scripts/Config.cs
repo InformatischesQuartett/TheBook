@@ -9,6 +9,7 @@ public static class Config
     private static readonly string _beliefsPath = Application.streamingAssetsPath + @"\Beliefs";
     public static float CharacterWalkSpeed;
     public static float MenuTransitionSpeed;
+    public static float MapMouseEmulationSpeed;
     public static List<BeliefSet> Beliefs { get; private set; }
 
 
@@ -19,6 +20,7 @@ public static class Config
 
         CharacterWalkSpeed = conf.CharacterWalkSpeed;
         MenuTransitionSpeed = conf.MenuTransitionSpeed;
+        MapMouseEmulationSpeed = conf.MapMouseEmulationSpeed;
 
         Beliefs = new List<BeliefSet>();
         foreach (string file in Directory.GetFiles(_beliefsPath))
@@ -37,6 +39,7 @@ internal struct ConfigSet
 {
     public float CharacterWalkSpeed;
     public float MenuTransitionSpeed;
+    public float MapMouseEmulationSpeed;
 }
 
 public struct BeliefSet
