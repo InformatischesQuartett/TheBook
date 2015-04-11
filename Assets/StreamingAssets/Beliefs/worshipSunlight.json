@@ -1,22 +1,29 @@
 {
-   "rule":"RULE TEXT",
+   "beliefName":"WorshipSunlight",
+   "rule":"Sunlight is the root of everything. Everybody shall bathe in it as much as possible.",
    "associatedBeliefs":[
-      {
-         "Rogue":"-1.0f"
-      },
 	  {
-         "WorshipShadow":"-1.0f"
-      },
-      {
-         "Pacifist":"1.0f"
-      }
+		 "Rogue":"-1.0f"
+	  },
+	  {
+		 "WorshipShadow":"-1.0f"
+	  },
+	  {
+		 "Pacifist":"1.0f"
+	  }
    ],
    "dialogues":[
-      "PLACEHOLDER1",
-      "PLACEHOLDER2"
+	  {
+		"dialogueName":"SunD1",
+		"dialogueText":"Sun is life!"
+	  },
+	  {
+		"dialogueName":"SunD2",
+		"dialogueText":"Praise the sun!"
+	  }	  
    ],
    "speeches":[
-      "PLACEHOLDER1",
-      "PLACEHOLDER2"
+	  "PLACEHOLDER1",
+	  "PLACEHOLDER2"
    ]
 }

@@ -18,7 +18,6 @@ public class GUIStartScreenFunctions : MonoBehaviour
 
     public void Update()
     {
-        Debug.Log(_transitioning);
         if (_transitioning)
         {
             _titleCanvas.transform.Translate(_transitionSpeed*_direction, 0, 0);
@@ -28,7 +27,6 @@ public class GUIStartScreenFunctions : MonoBehaviour
             {
                 _transitioning = false;
                 _direction *= -1;
-                Debug.Log("Stop " + _titleCanvas.transform.position.x + " " + _creditsCanvas.transform.position.x);
             }
         }
     }

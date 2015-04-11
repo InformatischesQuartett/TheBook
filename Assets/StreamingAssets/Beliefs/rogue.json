@@ -1,5 +1,6 @@
 {
-   "rule":"RULE TEXT",
+   "beliefName":"Rogue",
+   "rule":"If you are in need you shall take from the others.",
    "associatedBeliefs":[
       {
          "Shaman":"1.0f"
@@ -15,8 +16,14 @@
       }
    ],
    "dialogues":[
-      "PLACEHOLDER1",
-      "PLACEHOLDER2"
+      {
+		"dialogueName":"RogD1",
+		"dialogueText":"My neighbor has enough food for my whole family - I don't care taking stuff from him."
+	  },
+	  {
+		"dialogueName":"RogD2",
+		"dialogueText":"I don't want to talk with you."
+	  }	  
    ],
    "speeches":[
       "PLACEHOLDER1",

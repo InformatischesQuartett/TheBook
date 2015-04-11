@@ -1,5 +1,6 @@
 {
-   "rule":"RULE TEXT",
+   "beliefName":"AnimalLover",
+   "rule":"All animals are equal to us and must be protected.",
    "associatedBeliefs":[
       {
          "WorshipCats":"1.0f"
@@ -18,8 +19,14 @@
       }
    ],
    "dialogues":[
-      "PLACEHOLDER1",
-      "PLACEHOLDER2"
+      {
+		"dialogueName":"AniD1",
+		"dialogueText":"Animals are defenseless and need to be protected!"
+	  },
+	  {
+		"dialogueName":"AniD2",
+		"dialogueText":"Who are we to kill other living creatures?"
+	  }	
    ],
    "speeches":[
       "PLACEHOLDER1",

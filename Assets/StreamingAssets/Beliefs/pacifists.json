@@ -1,5 +1,6 @@
 {
-   "rule":"RULE TEXT",
+   "beliefName":"Pacifist",
+   "rule":""War is evil."",
    "associatedBeliefs":[
       {
          "OnlyFruits":"1.0f"
@@ -21,8 +22,14 @@
       }
    ],
    "dialogues":[
-      "PLACEHOLDER1",
-      "PLACEHOLDER2"
+      {
+		"dialogueName":"PacD1",
+		"dialogueText":"You can not fight agression with war. Peace is the key."
+	  },
+	  {
+		"dialogueName":"PacD2",
+		"dialogueText":"PACE!"
+	  }	 
    ],
    "speeches":[
       "PLACEHOLDER1",

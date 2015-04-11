@@ -1,5 +1,6 @@
 {
-   "rule":"RULE TEXT",
+   "beliefName":"OnlyMeat",
+   "rule":"There shall be no other food than meat.",
    "associatedBeliefs":[
       {
          "Farmer":"1.0f"
@@ -18,8 +19,14 @@
       }
    ],
    "dialogues":[
-      "PLACEHOLDER1",
-      "PLACEHOLDER2"
+      {
+		"dialogueName":"MeatD1",
+		"dialogueText":"Meat is life!"
+	  },
+	  {
+		"dialogueName":"MeatD2",
+		"dialogueText":"Meat gives me all the nutritions I need."
+	  }	  
    ],
    "speeches":[
       "PLACEHOLDER1",
