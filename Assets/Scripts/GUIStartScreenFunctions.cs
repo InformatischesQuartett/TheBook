@@ -27,7 +27,6 @@ public class GUIStartScreenFunctions : MonoBehaviour
             {
                 _transitioning = false;
                 _direction *= -1;
-                Debug.Log("Stop " + _titleCanvas.transform.position.x + " " + _creditsCanvas.transform.position.x);
             }
         }
     }
