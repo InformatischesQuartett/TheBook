@@ -3,8 +3,8 @@
    "rule":"War is good.",
    "associatedBeliefs":
       {
-         "OnlyMeat":"1.0".
-         "Pacifist":"-1.0".
+         "OnlyMeat":"1.0",
+         "Pacifist":"-1.0",
          "Rogue":"-1.0"
       },
    "dialogues":

@@ -17,13 +17,14 @@ public class Rule
     enum RuleState
     {
         Undiscovered,
-        Proposed,
+        Known,
         Active,
         Deleted
     }
 
     private readonly String _ruleText;
     private RuleState _state;
+
 
     public bool isActive
     {
@@ -49,15 +50,15 @@ public class Rule
         }
     }
 
-    public bool isProposed
+    public bool isKnown
     {
         get
         {
-            return (_state == RuleState.Proposed) ? true : false;
+            return (_state == RuleState.Known) ? true : false;
         }
         set
         {
-            _state = RuleState.Proposed;
+            _state = RuleState.Known;
         }
     }
 
@@ -66,16 +67,16 @@ public class Rule
    /**
     * Constructor
     **/
-    Rule(String ruleText)
+    public Rule(string ruletext)
     {
-        _ruleText = ruleText;
+        _ruleText = ruletext;
         _state = RuleState.Undiscovered;
     }
 
     /**
     * Getter Rule
     **/
-    public String getRule()
+    public String GetRule()
     {
         return _ruleText;
     }
