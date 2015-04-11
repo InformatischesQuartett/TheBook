@@ -24,13 +24,15 @@ public class TownView : MonoBehaviour {
 	{
 		float width = GetWidth (obj);
 		float baseWidth = GetWidth (Town_Base);
-		float interval = ((Player.transform.position.x) / width + 1) / 2;
-		float xPos = (width - baseWidth)/2 + (interval * (width/2));
+		float interval = (Player.transform.position.x / baseWidth) + 0.5f;
+		//float xPos = (0.5f - interval) * (width/2);
+		float overflow = (width - baseWidth) / 2;
+		float xPos = overflow - (interval * overflow * 2);
 		obj.transform.position = new Vector2(xPos, obj.transform.position.y);
 	}
 
 	float GetWidth(GameObject obj)
 	{
-		return obj.transform.localScale.x * obj.GetComponent<SpriteRenderer>().sprite.bounds.extents.x;
+		return obj.transform.localScale.x * obj.GetComponent<SpriteRenderer>().sprite.bounds.size.x;
 	}
 }
