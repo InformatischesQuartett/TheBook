@@ -4,24 +4,20 @@ using System.Collections;
 public class TownView : MonoBehaviour {
 
 	private GameObject Town_Base;
-	private GameObject Town_FG;
-	private GameObject Town_BG;
 	private GameObject Player;
+	private GameObject[] ParallaxObjects;
 
 	// Use this for initialization
 	void Start () {
 		Town_Base = GameObject.Find ("Town_Base");
-		Town_FG = GameObject.Find ("Town_Front");
-		Town_BG = GameObject.Find ("Town_Back");
 		Player = GameObject.Find ("Player");
+		ParallaxObjects = GameObject.FindGameObjectsWithTag ("Parallax");
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		if (Town_FG != null)
-			TranslateParallax(Town_FG);
-		if (Town_BG != null)
-			TranslateParallax(Town_BG);
+		foreach(GameObject obj in ParallaxObjects)
+			TranslateParallax(obj);
 	}
 
 	void TranslateParallax(GameObject obj)
