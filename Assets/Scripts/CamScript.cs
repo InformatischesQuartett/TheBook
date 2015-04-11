@@ -55,13 +55,5 @@ public class CamScript : MonoBehaviour {
 		foreach (var tex in ParallaxTextures) {
 			Graphics.Blit (tex, null as RenderTexture, mat);
 		}
-
-       // RenderTexture.active = backSceneRT;
-       // GL.Clear(true, true, Color.black);
-
-      /*  RenderTexture.active = mainSceneRT;
-        GL.Clear(true, true, Color.black);
-        */
-        RenderTexture.active = null;
     }
 }

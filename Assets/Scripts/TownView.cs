@@ -22,7 +22,6 @@ public class TownView : MonoBehaviour {
         for (int i = 0; i < ParallaxObjects.Count; i++)
         {
             var go = ParallaxObjects.ElementAt(i).gameObject;
-            go.layer = LayerMask.NameToLayer("Parallax" + (i + 1));
 
             var tmpDist = Camera.main.transform.position.z - go.transform.position.z;
             var diff = tmpDist / distToCam;
