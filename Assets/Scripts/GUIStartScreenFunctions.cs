@@ -33,11 +33,16 @@ public class GUIStartScreenFunctions : MonoBehaviour
 
     public void StartGame()
     {
-        Application.LoadLevel("Alex");
+        Application.LoadLevel("Mapscreen");
     }
 
     public void ToggleCredits()
     {
         _transitioning = true;
+    }
+
+    public void QuitGame()
+    {
+        Application.Quit();
     }
 }
