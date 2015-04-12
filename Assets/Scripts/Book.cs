@@ -2,12 +2,13 @@
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 
 public class Book : MonoBehaviour {
 
     /*all rules that are in the book*/
     private List<Rule> _ruleList = new List<Rule>();
-    private List<Rule> _activeRules = new List<Rule>();
+    public List<Rule> _activeRules = new List<Rule>();
     private List<Rule> _knownRules = new List<Rule>();
 
     private event EventHandler _updateBookEvent;
@@ -56,10 +57,14 @@ public class Book : MonoBehaviour {
 
     private void InitRuleList()
     {
+        //adding and activating the rule of the rules
+        _ruleList.Add(Game.MasterRule);
+        Game.MasterRule.isActive = true;
         foreach (var belief in Config.Beliefs)
         {
             _ruleList.Add(new Rule(belief.rule, belief.beliefName));
         }
+        UpdateBook();
     }
 
     // Update is called once per frame
@@ -107,9 +112,13 @@ public class Book : MonoBehaviour {
         UpdateBook();
     }
 
-    private void WriteRule(String key)
+    /// <summary>
+    /// Activate a rule, which will be written in the book immediately
+    /// </summary>
+    /// <param name="key"></param>
+    public void WriteRule(Rule ruleActivate)
     {
-        
+        ruleActivate.isActive = true;
     }
 
     private void UpdateBook()

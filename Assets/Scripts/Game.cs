@@ -9,6 +9,7 @@ using System.Collections;
 public static class Game {
 
     private static List<Town> _towns = new List<Town>();
+    public static Rule MasterRule = new Rule("Thou shalt not kill.", "MasterRule");
 
     public static List<Town> GetTowns()
     {
@@ -21,5 +22,6 @@ public static class Game {
         _towns.Add(new Town("Town A"));
         _towns.Add(new Town("Town B"));
         _towns.Add(new Town("Town C"));
+
     }
 }
