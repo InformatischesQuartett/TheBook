@@ -22,6 +22,8 @@ public class Rule
         Deleted
     }
 
+    public String RuleName { get; private set; }
+
     private readonly String _ruleText;
     private RuleState _state;
 
@@ -67,8 +69,9 @@ public class Rule
    /**
     * Constructor
     **/
-    public Rule(string ruletext)
+    public Rule(string ruletext, string rulename)
     {
+        RuleName = rulename;
         _ruleText = ruletext;
         _state = RuleState.Undiscovered;
     }

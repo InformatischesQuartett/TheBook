@@ -9,17 +9,17 @@ public class Book : MonoBehaviour {
     private List<Rule> _ruleList = new List<Rule>();
     private List<Rule> _activeRules = new List<Rule>();
     private List<Rule> _knownRules = new List<Rule>();
-    private Game _game;
+
     private event EventHandler _updateBookEvent;
 	
     // Use this for initialization
 	void Start ()
 	{
-	    _game = GameObject.Find("Game").GetComponent<Game>();
+	    
 	    InitRuleList();
 
 
-	    foreach (var town in _game.GetTowns())
+	    foreach (var town in Game.GetTowns())
 	    {
 	        _updateBookEvent += town.OnUpdateBook;
 	    }
@@ -51,13 +51,14 @@ public class Book : MonoBehaviour {
                 _activeRules.Add(rule);
             }
         }
+        UpdateBook();
     }
 
     private void InitRuleList()
     {
         foreach (var belief in Config.Beliefs)
         {
-            _ruleList.Add(new Rule(belief.rule));
+            _ruleList.Add(new Rule(belief.rule, belief.beliefName));
         }
     }
 

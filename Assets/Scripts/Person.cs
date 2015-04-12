@@ -1,11 +1,19 @@
-﻿using System.Collections.Generic;
-using UnityEngine;
+﻿using System;
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Xml.Schema;
+using Debug = UnityEngine.Debug;
+using Random = UnityEngine.Random;
 
 
 /// <summary>
 /// This datatype represents a Person in the game
 /// </summary>
-public class Person {
+public class Person
+{
+
+
+    private Book _book;
 
     /// <summary>
     /// The town where the person lives. It influences in what the person believes in.
@@ -27,26 +35,28 @@ public class Person {
 
     /// <summary>
     /// Defines how happe this person is. This value is influenced by the profets behavior and rules.
-    /// A happy person is easier to handel, while unhappi / dissatisfied person is more likely to revolt / turn ageints the prophet
+    /// A happy person is easier to handle, while unhappy / dissatisfied person is more likely to revolt / turn ageints the prophet
     /// </summary>
-    private float Happines { get; set; }
+    public  float Happines { get; private set; }
 
     public bool IsFollower { get; private set; }
 
-    private List<BeliefSet> BelieveList;
+    private List<BeliefSet> BeliefList;
     private int numberBeliefs;
+
 
     /// <summary>
     /// Constructor
     /// </summary>
     public Person(Town town)
     {
+        this.numberBeliefs = 3;
+        this.BeliefList = new List<BeliefSet>();
         this.HomeTown = town;
         this.Controllable = InitControllableViolent();
         this.Violent = InitControllableViolent();
         this.Happines = 70; // 70% Happy as std
         this.InitBeliveList();
-        this.numberBeliefs = 3;
     }
 
     /// <summary>
@@ -59,14 +69,29 @@ public class Person {
 
     private void InitBeliveList()
     {
-        BelieveList = new List<BeliefSet>();
-        for (int i = 0; i < numberBeliefs; i++)
+        while (BeliefList.Count != numberBeliefs)
         {
+            bool isDuplicate = false;
+            var candidate = Config.Beliefs[Random.Range(0, HomeTown.GetBeliefs().Count)];
+            if (BeliefList.Count == 0)
+            {
+                BeliefList.Add(candidate);
+                continue;
+            }
+            foreach (var beliefSet in BeliefList)
+            {
+                if (candidate.beliefName == beliefSet.beliefName)
+                {
+                    isDuplicate = true;
+                    break;
+                }
 
-            BelieveList.Add(HomeTown.GetBeliefs()[Random.Range(0,HomeTown.GetBeliefs().Count-1)]);
+            }
+            if (!isDuplicate)
+            {
+                BeliefList.Add(candidate); 
+            }
         }
-        //get belives for the persons hometown 
-        //pick randomly 3 of them (with a weight)
     }
 
     /// <summary>
@@ -75,14 +100,50 @@ public class Person {
     public void UpdateMood()
     {
         //when there is an update in "The Book" -> chek how it is relating to the BelieveList  -> Happiness--, Happines++ ore neutral
-        foreach (var belive in BelieveList)
+        //look it up and change values
+        var ruels = _book.GetActiveRules();
+
+        float pos = 0;
+        float neg = 0;
+        foreach (var rule in ruels)
         {
-            //look it up and change values
-            Debug.Log(BelieveList[0].associatedBeliefs);
+            if (DoesFit(rule) > 0)
+            {
+                pos++;
+            }
+            else
+            {
+                neg++;
+            }
+            Happines = Math.Max(1.0f, pos/neg);
+            Debug.Log("Happiness: " + Happines);
         }
     }
 
-    
-    
+    private float DoesFit(Rule rule)
+    {
+        float retval = 0;
+        foreach (var beliefSet in BeliefList)
+        {
+            if (beliefSet.beliefName == rule.RuleName)
+            {
+                retval += 1;
+            }
+            else
+            {
+                foreach (var associated in beliefSet.associatedBeliefs)
+                {
+                    if(associated.Key == rule.RuleName)
+                    {
+                        retval += associated.Value;
+                    }
+                }
+            }
+        }
+        return retval;
+    }
+
+
+
 
 }

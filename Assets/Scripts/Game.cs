@@ -6,33 +6,20 @@ using System.Collections;
 /// <summary>
 /// This is the main class for this game. This class will never be destroyed
 /// </summary>
-public class Game : MonoBehaviour {
+public static class Game {
 
-    private List<Town> _towns = new List<Town>();
+    private static List<Town> _towns = new List<Town>();
 
-    public List<Town> GetTowns()
+    public static List<Town> GetTowns()
     {
         return _towns;
     }
 
-    void Awake(){
-        Debug.Log("The Game");
-        DontDestroyOnLoad(this.gameObject);
-        CreateTowns();
-    }
-
-    // Use this for initialization
-	void Start () {
-
-	    
-	}
-	
-    private void CreateTowns()
+    static Game()
     {
-        _towns.Add(new Town("Town A")); 
+        Debug.Log("The Game");
+        _towns.Add(new Town("Town A"));
         _towns.Add(new Town("Town B"));
         _towns.Add(new Town("Town C"));
     }
-
-    
 }
