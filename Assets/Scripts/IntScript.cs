@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 
 public class IntScript : MonoBehaviour
 {
@@ -34,7 +35,15 @@ public class IntScript : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             _talking = true;
+
             Debug.Log("HELLO! HELLO! HEEEEELLLOOOO!");
+            
+            int rand = Random.RandomRange(0, Game.CurrenTown.GetBeliefs().Count);
+            var townBeliefs = Game.CurrenTown.GetBeliefs();
+            var belief = townBeliefs[rand];
+            var go = GameObject.Find("Game");
+            Book book = go.GetComponent<Book>();
+            book.AddNewRule(new Rule(belief.rule, belief.beliefName));
         }
 
         if (_talking)
