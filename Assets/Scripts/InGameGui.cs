@@ -45,6 +45,10 @@ public class InGameGui : MonoBehaviour
     //reference on the book script
     private Book _book;
 
+    private void Awake()
+    {
+        DontDestroyOnLoad(this);
+    }
 
     void Awake()
     {

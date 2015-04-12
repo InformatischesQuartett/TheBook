@@ -116,7 +116,6 @@ public class Person
                 neg++;
             }
             Happines = Math.Max(1.0f, pos/neg);
-            Debug.Log("Happiness: " + Happines);
         }
     }
 

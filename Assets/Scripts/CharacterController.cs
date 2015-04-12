@@ -102,15 +102,5 @@ public class CharacterController : MonoBehaviour
                 Camera.main.transform.position = new Vector3(transform.position.x, camPos.y, camPos.z);
         } else
             this.GetComponent<Animator>().SetBool("Walk", false);
-
-	    if (Math.Abs(Input.GetAxis("Submit")) > 0.01f)
-	    {
-	        Debug.Log("Submit");
-	    }
-
-	    if (Math.Abs(Input.GetAxis("Cancel")) > 0.01f)
-	    {
-	        Debug.Log("Cancel");
-	    }
 	}
 }

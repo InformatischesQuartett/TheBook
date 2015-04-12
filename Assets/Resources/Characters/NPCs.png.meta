@@ -1,0 +1,198 @@
+fileFormatVersion: 2
+guid: f710c95072c7e8b44af1d4bd0355409a
+timeCreated: 1428845029
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: NPCs_0
+    21300002: NPCs_1
+    21300004: NPCs_2
+    21300006: NPCs_3
+    21300008: NPCs_4
+    21300010: NPCs_5
+    21300012: NPCs_6
+    21300014: NPCs_7
+    21300016: NPCs_8
+    21300018: NPCs_9
+    21300020: NPCs_10
+    21300022: NPCs_11
+    21300024: NPCs_12
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: NPCs_0
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 76
+        width: 262
+        height: 781
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: NPCs_1
+      rect:
+        serializedVersion: 2
+        x: 493
+        y: 73
+        width: 272
+        height: 779
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: NPCs_2
+      rect:
+        serializedVersion: 2
+        x: 909
+        y: 66
+        width: 278
+        height: 795
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: NPCs_3
+      rect:
+        serializedVersion: 2
+        x: 1312
+        y: 66
+        width: 193
+        height: 733
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: NPCs_4
+      rect:
+        serializedVersion: 2
+        x: 1601
+        y: 71
+        width: 234
+        height: 730
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: NPCs_5
+      rect:
+        serializedVersion: 2
+        x: 1933
+        y: 64
+        width: 289
+        height: 822
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: NPCs_6
+      rect:
+        serializedVersion: 2
+        x: 2309
+        y: 69
+        width: 297
+        height: 747
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: NPCs_7
+      rect:
+        serializedVersion: 2
+        x: 2704
+        y: 73
+        width: 285
+        height: 796
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: NPCs_8
+      rect:
+        serializedVersion: 2
+        x: 3063
+        y: 61
+        width: 306
+        height: 779
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: NPCs_9
+      rect:
+        serializedVersion: 2
+        x: 3463
+        y: 61
+        width: 265
+        height: 832
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: NPCs_10
+      rect:
+        serializedVersion: 2
+        x: 3841
+        y: 76
+        width: 268
+        height: 829
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: NPCs_11
+      rect:
+        serializedVersion: 2
+        x: 4256
+        y: 59
+        width: 217
+        height: 834
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: NPCs_12
+      rect:
+        serializedVersion: 2
+        x: 4586
+        y: 64
+        width: 275
+        height: 812
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -10,6 +10,7 @@ public static class Game {
 
     private static List<Town> _towns = new List<Town>();
     public static Rule MasterRule = new Rule("Thou shalt not kill.", "MasterRule");
+    public static Town CurrenTown;
 
     public static List<Town> GetTowns()
     {
@@ -19,9 +20,9 @@ public static class Game {
     static Game()
     {
         Debug.Log("The Game");
-        _towns.Add(new Town("Town A"));
-        _towns.Add(new Town("Town B"));
-        _towns.Add(new Town("Town C"));
+        _towns.Add(new Town("Clayton"));
+        _towns.Add(new Town("Desertville"));
+        _towns.Add(new Town("Orienta"));
 
     }
 }
