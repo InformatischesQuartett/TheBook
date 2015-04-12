@@ -1,5 +1,5 @@
 {
 "CharacterWalkSpeed":2.0,
-"MenuTransitionSpeed":1,
+"MenuTransitionSpeed":10,
 "MapMouseEmulationSpeed":6,
 }
