@@ -5,8 +5,12 @@ using System.Collections.Generic;
 public class CamScript : MonoBehaviour {
 
     public Color BgColor;
+    public Texture CoatOfArms;
+
+    private bool _showCoat;
 
     private Material mat;
+    
 	private List<GameObject> ParallaxCameras;
 	private List<RenderTexture> ParallaxTextures;
 
@@ -16,8 +20,10 @@ public class CamScript : MonoBehaviour {
 		ParallaxTextures = new List<RenderTexture>();
 		mat = new Material (Shader.Find ("Unlit/Transparent"));
 
+	    _showCoat = true;
+
 		// Create cameras for parallax objects
-		var TownViewScript = GameObject.Find ("TownController").GetComponent<TownView>();
+		var townViewScript = GameObject.Find ("TownController").GetComponent<TownView>();
 
         var index = 1;
         while (LayerMask.NameToLayer("Parallax" + index) != -1) {
@@ -45,17 +51,38 @@ public class CamScript : MonoBehaviour {
             index++;
 		}
 	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
 
-    void OnPostRender() {
+    void OnPostRender()
+    {
         GL.Clear(true, true, Color.black);
 
-		foreach (var tex in ParallaxTextures) {
-			Graphics.Blit (tex, null as RenderTexture, mat);
-		}
+        foreach (var tex in ParallaxTextures)
+        {
+            Graphics.Blit(tex, null as RenderTexture, mat);
+        }
     }
+
+    void OnGUI()
+    {
+        if (_showCoat)
+        {
+            var aspRatio = (float) CoatOfArms.width/CoatOfArms.height;
+
+            var coatHeight = Screen.height*0.75f;
+            var coatWidth = aspRatio*coatHeight;
+
+            var coatLeft = Screen.width/2.0f - coatWidth/2.0f;
+            var coatTop = Screen.height/2.0f - coatHeight/2.0f;
+
+            GUI.DrawTexture(new Rect(coatLeft, coatTop, coatWidth, coatHeight), CoatOfArms);
+        }
+            
+    }
+
+    public void DisableCoat()
+    {
+        _showCoat = false;
+    }
+
+
 }

@@ -724,21 +724,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2eaa343f92ca3544a9bc1b7333a68a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BgColor: {r: .676470578, g: .676470578, b: .676470578, a: 1}
+  BgColor: {r: .662745118, g: .662745118, b: .662745118, a: 1}
+  CoatOfArms: {fileID: 2800000, guid: 5d92f30f7400f0b4283f81f5ba2f7d27, type: 3}
 --- !u!114 &1480874294
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1480874287}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 34382083ad114a07d000fbfb8d76c639, type: 3}
+  m_Script: {fileID: 11500000, guid: 7fc6bde01469c7b4badee5362f191d96, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  iterations: 2
-  blurSpread: .600000024
-  blurShader: {fileID: 4800000, guid: 57e6deea7c2924e22a5138e2b70bb4dc, type: 3}
+  downsample: 1
+  blurSize: 0
+  blurIterations: 2
+  blurType: 0
+  blurShader: {fileID: 4800000, guid: f9d5fa183cd6b45eeb1491f74863cd91, type: 3}
 --- !u!1 &1576376418
 GameObject:
   m_ObjectHideFlags: 0
