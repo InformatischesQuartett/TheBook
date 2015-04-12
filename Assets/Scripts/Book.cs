@@ -118,13 +118,5 @@ public class Book : MonoBehaviour {
         {
             _updateBookEvent(this, new EventArgs());
         }
-    }
-
-    void OnGUI()
-    {
-        
-        
-    }
-
-    
+    }   
 }
