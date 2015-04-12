@@ -244,7 +244,7 @@ GameObject:
   - 4: {fileID: 606811231}
   - 212: {fileID: 606811230}
   m_Layer: 9
-  m_Name: schatten
+  m_Name: Shadow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
