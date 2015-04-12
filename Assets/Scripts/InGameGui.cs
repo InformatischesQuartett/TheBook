@@ -45,8 +45,12 @@ public class InGameGui : MonoBehaviour
     //reference on the book script
     private Book _book;
 
+    private void Awake()
+    {
+        DontDestroyOnLoad(this);
+    }
 
-	// Use this for initialization
+    // Use this for initialization
 	void Start ()
 	{
         //set book guistyle
