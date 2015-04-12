@@ -13,6 +13,7 @@ public class InGameGui : MonoBehaviour
     public GUIStyle BookStyle;
     public GUIStyle IconStyle;
     public GUIStyle ArrowRightStyle;
+    public GUIStyle ArrowLeftStyle;
     public GUISkin skin;
     public Font theFont;
 
@@ -26,12 +27,14 @@ public class InGameGui : MonoBehaviour
     public float posX;
     public float posY;
 
+    private int currentPage;
+
     //determines if the book is shown or not after clicking the book icon
     private bool _enableBook;
 
     //TODO: dynamic size regarding the actual number of total rules
-    private static int _ruleAmount = 6;
-    private bool[] showingBookPage = new bool[_ruleAmount];
+    //private static int _ruleAmount = 6;
+    //private bool[] showingBookPage = new bool[_ruleAmount];
 
     //reference on the book script
     private Book _book;
@@ -46,7 +49,7 @@ public class InGameGui : MonoBehaviour
 	    BookStyle.wordWrap = true;
 
         _book = this.GetComponent<Book>();
-
+	    currentPage = 0;
 	    _enableBook = false;
 	}
 	
@@ -76,63 +79,61 @@ public class InGameGui : MonoBehaviour
     {
         GUI.skin = skin;
 
-        setAllPagesToFalse(0);
+        //setAllPagesToFalse(0);
         //enabeling first book page
-        showingBookPage[0] = true;
+        //showingBookPage[0] = true;
 
         GUI.DrawTexture(new Rect((Screen.width * 0.5f) - (bookSize.x / 2), (Screen.height * 0.5f) - (bookSize.y / 2), bookSize.x, bookSize.y), bookImage);
 
 
-        if (showingBookPage[0])
-        {
+
             GUI.BeginGroup(new Rect((Screen.width * 0.5f) - (bookSize.x / 2), (Screen.height * 0.5f) - (bookSize.y / 2), bookSize.x, bookSize.y));
+                //right button        
+            if (currentPage + 2 < Config.Beliefs.Count)
+            {
                 if (GUI.Button(new Rect(bookSize.x * 0.836f, bookSize.y * 0.67f, arrowSize.x, arrowSize.y), "", ArrowRightStyle))
-                    {
-                        setAllPagesToFalse(1);
-                        showingBookPage[1] = true;
-                    }
-                //left page
+                            {
+                                currentPage+=2;
+                            }
+            }
+
+                //left button
+        if (currentPage > 0)
+        {
+            if (
+                GUI.Button(new Rect(bookSize.x*0.05f, bookSize.y*0.67f, arrowSize.x, arrowSize.y), "", ArrowLeftStyle) )
+            {
+                currentPage -= 2;
+            }
+        }
+        //left page
                 GUI.BeginGroup(new Rect(bookSize.x * 0.08f, bookSize.y * 0.08f, boxSize.x, boxSize.y));
                     //GUI.Box(new Rect(bookSize.x * 0.08f, bookSize.y*0.08f, boxSize.x, boxSize.y), "test");
                     //GUI.Box(new Rect(0, 0, boxSize.x, boxSize.y), "FOOOOOOOOOO", BookStyle);
                     // GUILayout.TextArea(Config.Beliefs[0].rule, (int)boxSize.x, BookStyle);
 
-                    GUI.TextArea(new Rect(0, 0, boxSize.x, boxSize.y), Config.Beliefs[0].rule, BookStyle);
+                    GUI.TextArea(new Rect(0, 0, boxSize.x, boxSize.y), Config.Beliefs[currentPage].rule, BookStyle);
                 GUI.EndGroup();
 
                 //right page
                 GUI.BeginGroup(new Rect(bookSize.x * 0.506f, bookSize.y * 0.25f, boxSize.x, boxSize.y * 0.75f));
                     //GUI.Box(new Rect(bookSize.x * 0.08f, bookSize.y*0.08f, boxSize.x, boxSize.y), "test");
-                    GUI.Box(new Rect(0, 0, boxSize.x, boxSize.y * 0.75f), "BAAAAAAAAAAAAAAR", BookStyle);
+                GUI.Box(new Rect(0, 0, boxSize.x, boxSize.y * 0.75f), Config.Beliefs[currentPage+1].rule, BookStyle);
                 GUI.EndGroup();
 
             GUI.EndGroup();
-        }
         
 
+
     }
 
-    /// <summary>
-    /// Sets all param to false except the number that is given as an argument.
-    /// </summary>
-    /// <param name="except"></param>
-    void setAllPagesToFalse(int except)
-    {
-        for (int i = 0; i < showingBookPage.Length; i++)
-        {
-            if (i != except)
-            {
-                showingBookPage[i] = false;
-            }
-            
-        }
-    }
-
+   
     void OnGUI () {
         
         if (GUI.Button(new Rect(Screen.width - (iconSize.x * 1.25f), (iconSize.y * 0.18f ), iconSize.x, iconSize.y), "", IconStyle))
         {
             _enableBook = !_enableBook;
+            Debug.Log("button");
         }
 
         if (_enableBook)
