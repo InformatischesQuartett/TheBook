@@ -34,9 +34,8 @@ public class IntScript : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            _talking = true;
-
-            Debug.Log("HELLO! HELLO! HEEEEELLLOOOO!");
+            _other.GetComponent<Animator>().SetBool("Walk", false);
+            _other.GetComponent<Animator>().SetBool("Talk", true);
             
             int rand = Random.RandomRange(0, Game.CurrenTown.GetBeliefs().Count);
             var townBeliefs = Game.CurrenTown.GetBeliefs();
@@ -51,12 +50,6 @@ public class IntScript : MonoBehaviour
                 }
             }
 
-        }
-
-        if (_talking)
-        {
-            _other.GetComponent<Animator>().SetBool("Walk", false);
-            _other.GetComponent<Animator>().SetBool("Talk", true);
         }
     }
 }
