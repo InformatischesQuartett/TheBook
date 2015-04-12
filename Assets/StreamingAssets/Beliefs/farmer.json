@@ -10,8 +10,10 @@
       },
    "dialogues":
       {
-		"farmD1":"I am a farmer and I don't care about saving animals. If my family is hungry, I will serve them the food my farm can give me.",
-		"farmD2":"I eat what the earth produces."
+		"AniD1":"We raise both plants and animals, why should we be denied the flesh of either?",
+		"AniD2":"Plants belong in rows and animals in pens, nature is ours to tame!.",
+		"AniD3":"The glorious sun brings life to our crops, our crops bring life to the herds, and together they sustain our people.",
+		"AniD4":"In the time before time the goddess of harvest scattered a handful of seeds into the heavens, her crops will forever illuminate the night."
 	  },
    "speeches":[
       "PLACEHOLDER1",

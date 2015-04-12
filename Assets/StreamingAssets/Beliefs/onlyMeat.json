@@ -11,8 +11,10 @@
       },
    "dialogues":
       {
-		"MeatD1":"Meat is life!",
-		"MeatD2":"Meat gives me all the nutritions I need."
+		"AniD1":"Food grown in dirt tastes like dirt, there is divinity in the butchers work.",
+		"AniD2":"Holy words may be discerned in the perfect marbling of a haunch steak.",
+		"AniD3":"Taking the life of an animal is a sacred act, we trade their lives for our own.",
+		"AniD4":"What better to sustain flesh than flesh!"
 	  },
    "speeches":[
       "PLACEHOLDER1",

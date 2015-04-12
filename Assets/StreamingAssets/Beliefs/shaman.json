@@ -8,8 +8,10 @@
       },
    "dialogues":
       {
-		"ShamD1":"I can make you a potion that helps you with that beard of yours.",
-		"ShamD2":"Sacrificing an animal after midnight gives me more power that before this ghostly hour."
+		"AniD1":"Through nocturnel rituals the spirits of the wild may be bound to our will.",
+		"AniD2":"When we are without rain we sacrifice a goat, when the locusts come the sacrifice is a young calf, nature must be appeased.",
+		"AniD3":"My potions could help with that beard of yours...",
+		"AniD4":"Our magic loses its potency in the harsh light of day, night is the time for rituals!"
 	  },
    "speeches":[
       "PLACEHOLDER1",

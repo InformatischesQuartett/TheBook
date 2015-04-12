@@ -10,8 +10,10 @@
       },
    "dialogues":
       {
-		"SunD1":"Our skin is too delecate to be in the sun. The sun burns us and is just pure evil.",
-		"SunD2":"Shadow!"
+		"AniD1":"The blinding sun rules this desert like a tyrant, only in the night are we free from her scorching rays.",
+		"AniD2":"The night is a time of peace, divinity may be found in a tranquil evening.",
+		"AniD3":"Those who worship the sun cannot even gaze upon her face without being blinded, the moon is a kinder god",
+		"AniD4":"Shadow and shade, coolness and tranquility, the night time... is the right time."
 	  },
    "speeches":[
       "PLACEHOLDER1",

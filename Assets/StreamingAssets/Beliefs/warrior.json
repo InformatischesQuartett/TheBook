@@ -9,8 +9,10 @@
       },
    "dialogues":
       {
-		"WarD1":"Blubb!",
-		"WarD2":"Blabb!"
+		"AniD1":"Our temple is the battlefield, divinity may be found in the screams of the fallen.",
+		"AniD2":"Only in conflict can we truly realize our potential.",
+		"AniD3":"The most beautiful music is that of sword against sword.",
+		"AniD4":"Death on the battlefield is the greatest gift, whether given or recieved!"
 	  },
    "speeches":[
       "PLACEHOLDER1",
