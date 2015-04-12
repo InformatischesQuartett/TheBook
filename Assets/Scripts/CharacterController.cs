@@ -35,13 +35,13 @@ public class CharacterController : MonoBehaviour
 	{
         if (!_init)
         {
-            _townWidth = _townScript.GetWidth(_townScript.Town_Base);
-            _townPos = _townScript.Town_Base.transform.position;
+            _townWidth = _townScript.GetWidth(_townScript.TownBase);
+            _townPos = _townScript.TownBase.transform.position;
 
             var depthZ = Camera.main.WorldToScreenPoint(_townPos).z;
             _halfW = -Camera.main.ScreenToWorldPoint(new Vector3(0, 0, depthZ)).x;
 
-            // move to left edge
+            // move cam to left edge
             var vec = _townPos + _townWidth / 2 * Vector3.left;
             Camera.main.transform.position = new Vector3(vec.x, 0, 0);
             Camera.main.transform.position += Vector3.right * _halfW;
