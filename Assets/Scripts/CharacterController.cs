@@ -90,6 +90,7 @@ public class CharacterController : MonoBehaviour
         {
             this.transform.Translate(Input.GetAxis("Horizontal") * _speed * Time.deltaTime, 0, 0);
             this.GetComponent<Animator>().SetBool("Walk", Math.Abs(Input.GetAxis("Horizontal")) > 0.01f);
+            this.GetComponent<Animator>().SetBool("Talk", false);
 
             var scale = this.transform.localScale.y;
 
