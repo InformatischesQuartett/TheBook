@@ -9,8 +9,10 @@
       },
    "dialogues":
       {
-		"FishD1":"Praise the fish!",
-		"FishD2":"Fish!"
+		"AniD1":"The fisherman is nothing if not a mass murderer.",
+		"AniD2":"Fish are water brought to life, divinity may be found in fluid grace.",
+		"AniD3":"Long ago the cats started a war that has raged ever since, but just wait until the flood comes...",
+		"AniD4":"When the flood comes this desert will be an ocean and the fish will rule the kingdoms of men."
 	  },
    "speeches":[
       "PLACEHOLDER1",

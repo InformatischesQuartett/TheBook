@@ -10,8 +10,10 @@
       },
    "dialogues":
       {
-		"RogD1":"My neighbor has enough food for my whole family - I don't care taking stuff from him.",
-		"RogD2":"I don't want to talk with you."
+		"AniD1":"If my neighbor is blessed with plenty, why should I not share on her wealth?",
+		"AniD2":"Violence is wrong but thievery never hurt a soul.",
+		"AniD3":"Kings and merchants are the embodiment of greed, they will share, willingly or not...",
+		"AniD4":"Laws serve only to protect those who write them, the liberation of wealth should never be a crime."
 	  },
    "speeches":[
       "PLACEHOLDER1",

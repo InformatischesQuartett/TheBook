@@ -26,6 +26,11 @@ public class Book : MonoBehaviour {
         
 	}
 
+    public List<Rule> GetActiveRules()
+    {
+        return _activeRules;
+    }
+
     /// <summary>
     /// Is called whenever a new rule is added, deleted or discovered
     /// </summary>

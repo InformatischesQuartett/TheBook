@@ -11,3 +11,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Tests/Alex.unity
   - enabled: 1
     path: Assets/Scenes/Mapscreen.unity
+  - enabled: 1
+    path: Assets/Scenes/Town1.unity
+  - enabled: 1
+    path: Assets/Scenes/Town2.unity
+  - enabled: 1
+    path: Assets/Scenes/Town3.unity

@@ -10,8 +10,10 @@
       },
    "dialogues":
       {
-		"CatD1":"Cats are the descendants of the gods.",
-		"CatD2":"Cats!"
+		"AniD1":"Cats understand life better than most people, food, sunlight and liesure.",
+		"AniD2":"Cats are the closest relatives of the gods, divinity may be found in a kittens purr.",
+		"AniD3":"When the first cat rightfully devoured the first fish an age of conflict was spawned.",
+		"AniD4":"Sun upon the belly is a form of worship all of its own."
 	  },
    "speeches":[
       "PLACEHOLDER1",

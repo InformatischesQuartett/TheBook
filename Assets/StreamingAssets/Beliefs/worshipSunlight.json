@@ -9,8 +9,10 @@
 	  },
    "dialogues":
 	  {
-		"SunD1":"Sun is life!",
-		"SunD2":"Praise the sun!"
+		"AniD1":"The sun is so beautiful that to gave upon her is to be blinded by radiance.",
+		"AniD2":"Light is life and warmth, shadow is death and cold, the choice is simple.",
+		"AniD3":"Sunlight is holy, divinity can be found in the heat upon your skin.",
+		"AniD4":"The cycle of each day represents the cycle of life, dawn is birth and dusk is death."
 	  },
    "speeches":[
 	  "PLACEHOLDER1",

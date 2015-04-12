@@ -9,8 +9,10 @@
       },
    "dialogues":
       {
-		"FruitD1":"FRUIT!",
-		"FruitD2":"Killing and eating living creatures is disgusting."
+		"AniD1":"I like the farmers but vegetables are so bland, divinity is found in the sweetness of an orange.",
+		"AniD2":"I man who would chose the stringy flesh of an animal over the succulent flesh banana should NEVER be trusted.",
+		"AniD3":"By the grace of the sun our melons will swell into ripeness.",
+		"AniD4":"Fallen fruit seems a waste, but in decomposition it may be transformed into a heady wine."
 	  },
    "speeches":[
       "PLACEHOLDER1",

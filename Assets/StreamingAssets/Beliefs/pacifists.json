@@ -12,8 +12,10 @@
       },
    "dialogues":
       {
-		"PacD1":"You can not fight agression with war. Peace is the key.",
-		"PacD2":"PACE!"
+		"AniD1":"War only leads to war, to strike another man is to be damned.",
+		"AniD2":"The cacophony of war has no place here, divinity may be found in a quiet summer day.",
+		"AniD3":"War is the home of the great god Pain and his disciples: death, sorrow, and waste. ",
+		"AniD4":"only in peace can mankind truly seperate itself from the beasts."
 	  },
    "speeches":[
       "PLACEHOLDER1",
