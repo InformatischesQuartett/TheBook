@@ -14,7 +14,7 @@ public class MapController : MonoBehaviour
 	// Use this for initialization
 	void Start ()
 	{
-	    Cursor.SetCursor(Config.Cursor, new Vector2(17, 9), CursorMode.Auto);
+	    Cursor.SetCursor(Config.Cursor, new Vector2(3, 1), CursorMode.ForceSoftware);
 	}
 	
 	// Update is called once per frame
