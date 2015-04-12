@@ -81,7 +81,6 @@ public class CharacterController : MonoBehaviour
         }
 
         var camPos = Camera.main.transform.position;
-		var leftBaseScreen = Camera.main.WorldToScreenPoint (_townPos + _townWidth / 2 * Vector3.left);
         var rightBaseScreen = Camera.main.WorldToScreenPoint(_townPos + _townWidth / 2 * Vector3.right);
 
         var allowWalk = (Input.GetAxis("Horizontal") < 0 && transform.position.x > _startX - _halfW/4.0f);

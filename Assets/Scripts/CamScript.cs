@@ -23,9 +23,8 @@ public class CamScript : MonoBehaviour {
 	    _showCoat = true;
 
 		// Create cameras for parallax objects
-		var townViewScript = GameObject.Find ("TownController").GetComponent<TownView>();
-
         var index = 1;
+
         while (LayerMask.NameToLayer("Parallax" + index) != -1) {
 			GameObject newobj = new GameObject("autoCamera" + index, typeof(Camera));
 			var cam = newobj.GetComponent<Camera>();
