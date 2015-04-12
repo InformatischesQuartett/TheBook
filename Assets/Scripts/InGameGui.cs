@@ -14,6 +14,14 @@ public class InGameGui : MonoBehaviour
     private Vector2 bookSize;
     private Vector2 boxSize;
 
+    //determines if the book is shown or not after clicking the book icon
+    private bool _enableBook;
+
+    //TODO: dynamic size regarding the actual number of total rules
+    private static int _ruleAmount = 6;
+    private bool[] existingBookPages = new bool[_ruleAmount];
+
+
 	// Use this for initialization
 	void Start ()
 	{
@@ -21,6 +29,8 @@ public class InGameGui : MonoBehaviour
 	    BookStyle.fontSize = 20;
 	    BookStyle.font = theFont;
 	    BookStyle.wordWrap = true;
+
+	    _enableBook = false;
 	}
 	
 	// Update is called once per frame
@@ -66,7 +76,16 @@ public class InGameGui : MonoBehaviour
 
 
     void OnGUI () {
-        ShowBook();
+        
+       //if (GUI.Button(new Rect(Screen.width), "Book Icon", BookStyle))
+       // {
+            
+       // }
+        if (_enableBook)
+        {
+            ShowBook();
+        }
+        
     }
   
 }
