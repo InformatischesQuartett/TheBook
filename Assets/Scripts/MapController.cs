@@ -4,17 +4,12 @@ using System.Runtime.InteropServices;
 public class MapController : MonoBehaviour
 {
     private bool mouseControled;
-    private Vector2 _cursorPosition;
-
-    [DllImport("user32.dll")]
-    public static extern bool SetCursorPos(int X, int Y);
-    [DllImport("user32.dll")]
-    public static extern bool GetCursorPos(out int X, out int Y);
+    private MouseOperations.MousePoint _cursorPosition;
 
 	// Use this for initialization
 	void Start ()
 	{
-	    Cursor.SetCursor(Config.Cursor, new Vector2(17, 9), CursorMode.Auto);
+	    Cursor.SetCursor(Config.Cursor, new Vector2(3, 1), CursorMode.ForceSoftware);
 	}
 	
 	// Update is called once per frame
@@ -31,18 +26,18 @@ public class MapController : MonoBehaviour
 
 	    if (mouseControled)
 	    {
-	        int x, y;
-	        GetCursorPos(out x, out y);
-	        _cursorPosition.x = x;
-	        _cursorPosition.y = y;
+	        _cursorPosition = MouseOperations.GetCursorPosition();
 	    }
 	    else
 	    {
-	        _cursorPosition.x += Input.GetAxis("Horizontal")*Config.MapMouseEmulationSpeed;
-	        _cursorPosition.y -= Input.GetAxis("Vertical")*Config.MapMouseEmulationSpeed;
-	        SetCursorPos((int) _cursorPosition.x, (int) _cursorPosition.y);
+	        _cursorPosition.X += (int) (Input.GetAxis("Horizontal")*Config.MapMouseEmulationSpeed);
+	        _cursorPosition.Y -= (int) (Input.GetAxis("Vertical")*Config.MapMouseEmulationSpeed);
+
+            MouseOperations.SetCursorPosition(_cursorPosition);
 	    }
 
-        Debug.Log(_cursorPosition);
+        if (Input.GetAxis("Fire1") != 0 || Input.GetAxis("Submit") != 0)
+            MouseOperations.MouseEvent(MouseOperations.MouseEventFlags.LeftUp | MouseOperations.MouseEventFlags.LeftDown);
+
 	}
 }

@@ -1,6 +1,8 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Runtime.Serialization.Formatters;
 using Random = UnityEngine.Random;
 using UnityEngine;
 using Debug = UnityEngine.Debug;
@@ -74,10 +76,56 @@ public class Town {
     private void InitBeliefs()
     {
         int size = Config.Beliefs.Count;
-
-        for (int i = 0; i < _numberBelieves; i++)
+        int negBeliefs = 0;
+        int maxNegBeliefs = 2;
+        while (BeliefsList.Count != _numberBelieves)
         {
-            BeliefsList.Add(Config.Beliefs[Random.Range(0, size)]);
+            bool isDuplicate = false;
+            var candidate = Config.Beliefs[Random.Range(0, size)];
+            int candidateNegBeliefs = 0;
+            //empty List, first entry
+            if (BeliefsList.Count == 0)
+            {
+                BeliefsList.Add(candidate);
+                continue;
+            }
+            foreach (var beliefSet in BeliefsList)
+            {
+                if (candidate.beliefName == beliefSet.beliefName)
+                {
+                    isDuplicate = true;
+                    break;
+                }
+                
+            }
+            if (isDuplicate)
+            {
+                continue;
+            }
+            foreach (var existingBelief in  BeliefsList)
+            {
+
+                foreach (var belief in candidate.associatedBeliefs)
+                {
+                    if (belief.Value < 0)
+                    {
+                        if (existingBelief.beliefName == belief.Key)
+                        {
+                            candidateNegBeliefs++;
+                        }
+                    }
+                }
+            }
+
+            if (negBeliefs + candidateNegBeliefs > maxNegBeliefs)
+            {
+                continue;
+            }
+            else
+            {
+                BeliefsList.Add(candidate);
+                negBeliefs += candidateNegBeliefs;
+            }
         }
     }
 

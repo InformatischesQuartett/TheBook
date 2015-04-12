@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using UnityEditor;
+using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
 
@@ -129,18 +130,21 @@ public class InGameGui : MonoBehaviour
 
    
     void OnGUI () {
-        
-        if (GUI.Button(new Rect(Screen.width - (iconSize.x * 1.25f), (iconSize.y * 0.18f ), iconSize.x, iconSize.y), "", IconStyle))
+       // Debug.Log(Application.loadedLevel);
+        if (Application.loadedLevel != 0)
         {
-            _enableBook = !_enableBook;
-            Debug.Log("button");
-        }
+            if (GUI.Button(new Rect(Screen.width - (iconSize.x*1.25f), (iconSize.y*0.18f), iconSize.x, iconSize.y), "",
+                IconStyle))
+            {
+                _enableBook = !_enableBook;
 
-        if (_enableBook)
-        {
-            ShowBook();
+            }
+
+            if (_enableBook)
+            {
+                ShowBook();
+            }
         }
-        
     }
   
 }
