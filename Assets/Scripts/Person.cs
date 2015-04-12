@@ -5,7 +5,11 @@ using UnityEngine;
 /// <summary>
 /// This datatype represents a Person in the game
 /// </summary>
-public class Person {
+public class Person
+{
+
+
+    private Book _book;
 
     /// <summary>
     /// The town where the person lives. It influences in what the person believes in.
@@ -33,20 +37,22 @@ public class Person {
 
     public bool IsFollower { get; private set; }
 
-    private List<BeliefSet> BelieveList;
+    private List<BeliefSet> BeliefList;
     private int numberBeliefs;
+
 
     /// <summary>
     /// Constructor
     /// </summary>
     public Person(Town town)
     {
+        this.numberBeliefs = 3;
+        this.BeliefList = new List<BeliefSet>();
         this.HomeTown = town;
         this.Controllable = InitControllableViolent();
         this.Violent = InitControllableViolent();
         this.Happines = 70; // 70% Happy as std
         this.InitBeliveList();
-        this.numberBeliefs = 3;
     }
 
     /// <summary>
@@ -59,14 +65,29 @@ public class Person {
 
     private void InitBeliveList()
     {
-        BelieveList = new List<BeliefSet>();
-        for (int i = 0; i < numberBeliefs; i++)
+        while (BeliefList.Count != numberBeliefs)
         {
+            bool isDuplicate = false;
+            var candidate = Config.Beliefs[Random.Range(0, HomeTown.GetBeliefs().Count)];
+            if (BeliefList.Count == 0)
+            {
+                BeliefList.Add(candidate);
+                continue;
+            }
+            foreach (var beliefSet in BeliefList)
+            {
+                if (candidate.beliefName == beliefSet.beliefName)
+                {
+                    isDuplicate = true;
+                    break;
+                }
 
-            BelieveList.Add(HomeTown.GetBeliefs()[Random.Range(0,HomeTown.GetBeliefs().Count-1)]);
+            }
+            if (!isDuplicate)
+            {
+                BeliefList.Add(candidate); 
+            }
         }
-        //get belives for the persons hometown 
-        //pick randomly 3 of them (with a weight)
     }
 
     /// <summary>
@@ -75,10 +96,10 @@ public class Person {
     public void UpdateMood()
     {
         //when there is an update in "The Book" -> chek how it is relating to the BelieveList  -> Happiness--, Happines++ ore neutral
-        foreach (var belive in BelieveList)
+        foreach (var belive in BeliefList)
         {
             //look it up and change values
-            Debug.Log(BelieveList[0].associatedBeliefs);
+            Debug.Log(BeliefList[0].associatedBeliefs);
         }
     }
 
