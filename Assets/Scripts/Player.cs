@@ -29,7 +29,7 @@ public class Player : MonoBehaviour
     private void GetBeliefFromNpc()
     {
         //NPC.dialog.Bellief
-        Rule dummyRule = new Rule("There shall be no other food than fruits - protect all living creatures");
+        Rule dummyRule = new Rule("There shall be no other food than fruits - protect all living creatures", "dummy");
         _book.AddNewRule(dummyRule);
     }
 

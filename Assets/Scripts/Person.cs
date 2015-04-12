@@ -1,5 +1,9 @@
-﻿using System.Collections.Generic;
-using UnityEngine;
+﻿using System;
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Xml.Schema;
+using Debug = UnityEngine.Debug;
+using Random = UnityEngine.Random;
 
 
 /// <summary>
@@ -31,9 +35,9 @@ public class Person
 
     /// <summary>
     /// Defines how happe this person is. This value is influenced by the profets behavior and rules.
-    /// A happy person is easier to handel, while unhappi / dissatisfied person is more likely to revolt / turn ageints the prophet
+    /// A happy person is easier to handle, while unhappy / dissatisfied person is more likely to revolt / turn ageints the prophet
     /// </summary>
-    private float Happines { get; set; }
+    public  float Happines { get; private set; }
 
     public bool IsFollower { get; private set; }
 
@@ -96,14 +100,50 @@ public class Person
     public void UpdateMood()
     {
         //when there is an update in "The Book" -> chek how it is relating to the BelieveList  -> Happiness--, Happines++ ore neutral
-        foreach (var belive in BeliefList)
+        //look it up and change values
+        var ruels = _book.GetActiveRules();
+
+        float pos = 0;
+        float neg = 0;
+        foreach (var rule in ruels)
         {
-            //look it up and change values
-            Debug.Log(BeliefList[0].associatedBeliefs);
+            if (DoesFit(rule) > 0)
+            {
+                pos++;
+            }
+            else
+            {
+                neg++;
+            }
+            Happines = Math.Max(1.0f, pos/neg);
+            Debug.Log("Happiness: " + Happines);
         }
     }
 
-    
-    
+    private float DoesFit(Rule rule)
+    {
+        float retval = 0;
+        foreach (var beliefSet in BeliefList)
+        {
+            if (beliefSet.beliefName == rule.RuleName)
+            {
+                retval += 1;
+            }
+            else
+            {
+                foreach (var associated in beliefSet.associatedBeliefs)
+                {
+                    if(associated.Key == rule.RuleName)
+                    {
+                        retval += associated.Value;
+                    }
+                }
+            }
+        }
+        return retval;
+    }
+
+
+
 
 }

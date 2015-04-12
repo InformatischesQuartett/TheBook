@@ -52,6 +52,12 @@ public class Town {
     /// </summary>
     public int Followers { get; private set; }
 
+
+    /// <summary>
+    /// Rate of how many ppl of the town are folloing you.
+    /// </summary>
+    public float HappinessRate { get; private set; }
+
     /// <summary>
     /// is true the town is Convertet. the town is converted if 70% of the inhabitants are followers
     /// </summary>
@@ -64,10 +70,12 @@ public class Town {
     /// <param name="name"></param> is the name of teh town
     public Town(string name)
     {
+        this.HappinessRate = -1f;
         this.Name = name;
         this.NumberInhabitants = 50; //TODO: dummy Value
         InitBeliefs();
         InitInhabitants();
+
     }
 
     /// <summary>
@@ -152,23 +160,12 @@ public class Town {
             inhabitant.UpdateMood();
         }
 
-        //update the number of followerd regarding their new moods
+        float happinessSumm = 0;
+        //get the ratio of the mood
         foreach (var inhabitant in Inhabitants)
         {
-            if (inhabitant.IsFollower)
-            {
-                Followers++;
-            }
+            happinessSumm += inhabitant.Happines;
         }
-
-        // IsConverted
-        if (Followers/Inhabitants.Count >= 0.7f)
-        {
-            IsConverted = true;
-        }
-        else
-        {
-            IsConverted = false;
-        }
+        HappinessRate = (happinessSumm/Inhabitants.Count);
     }
 }
