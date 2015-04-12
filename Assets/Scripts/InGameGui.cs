@@ -133,7 +133,7 @@ public class InGameGui : MonoBehaviour
                     //delete Button left
                      if (GUI.Button(new Rect(0, bookSize.y * 0.06f, deleteSize.x, deleteSize.y), "", DeleteStyle))
                     {
-                        
+                        //delete activeRule[currentPage]
                     }
                    
                     //textfield left
@@ -142,7 +142,15 @@ public class InGameGui : MonoBehaviour
 
                 //Group for right page
                 GUI.BeginGroup(new Rect(bookSize.x * 0.506f, bookSize.y * 0.25f, boxSize.x, boxSize.y * 0.75f));
-                    GUI.Box(new Rect(0, 0, boxSize.x, boxSize.y * 0.75f), Config.Beliefs[currentPage+1].rule, BookStyle);
+                    //text background right
+                    GUI.DrawTexture(new Rect(bookSize.x * 0.04f, 0, textBGSize.x, textBGSize.y), textBackground);
+                    //delete Button right
+                    if (GUI.Button(new Rect(bookSize.x * 0.03f, bookSize.y * 0.02f, deleteSize.x, deleteSize.y), "", DeleteStyle))
+                    {
+                        //delete activeRule[currentPage +1]
+                    }
+                    //textfield right
+                    GUI.Box(new Rect(bookSize.x * 0.067f, bookSize.y * 0.14f, boxSize.x * 0.76f, boxSize.y * 0.47f), Config.Beliefs[currentPage + 1].rule, BookStyle);
                 GUI.EndGroup();
 
             GUI.EndGroup();
