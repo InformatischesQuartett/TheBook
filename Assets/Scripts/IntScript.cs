@@ -43,7 +43,14 @@ public class IntScript : MonoBehaviour
             var belief = townBeliefs[rand];
             var go = GameObject.Find("Game");
             Book book = go.GetComponent<Book>();
-            book.AddNewRule(new Rule(belief.rule, belief.beliefName));
+            foreach (var rule in book._ruleList)
+            {
+                if (rule.RuleName == belief.beliefName)
+                {
+                    book.WriteRule(rule);
+                }
+            }
+
         }
 
         if (_talking)

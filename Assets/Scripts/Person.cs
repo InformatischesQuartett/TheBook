@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Xml.Schema;
+using UnityEngine;
 using Debug = UnityEngine.Debug;
 using Random = UnityEngine.Random;
 
@@ -57,6 +58,7 @@ public class Person
         this.Violent = InitControllableViolent();
         this.Happines = 70; // 70% Happy as std
         this.InitBeliveList();
+        _book = GameObject.Find("Game").GetComponent<Book>();
     }
 
     /// <summary>

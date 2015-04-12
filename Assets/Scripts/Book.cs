@@ -7,7 +7,7 @@ using UnityEditor;
 public class Book : MonoBehaviour {
 
     /*all rules that are in the book*/
-    private List<Rule> _ruleList = new List<Rule>();
+    public  List<Rule> _ruleList = new List<Rule>();
     public List<Rule> _activeRules = new List<Rule>();
     private List<Rule> _knownRules = new List<Rule>();
 
@@ -52,7 +52,6 @@ public class Book : MonoBehaviour {
                 _activeRules.Add(rule);
             }
         }
-        UpdateBook();
     }
 
     private void InitRuleList()
@@ -119,6 +118,7 @@ public class Book : MonoBehaviour {
     public void WriteRule(Rule ruleActivate)
     {
         ruleActivate.isActive = true;
+        UpdateBook();
     }
 
     private void UpdateBook()

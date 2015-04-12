@@ -50,10 +50,6 @@ public class InGameGui : MonoBehaviour
         DontDestroyOnLoad(this);
     }
 
-    void Awake()
-    {
-        DontDestroyOnLoad(this.gameObject);
-    }
 
     // Use this for initialization
     void Start()
@@ -174,7 +170,6 @@ public class InGameGui : MonoBehaviour
 
     void OnGUI()
     {
-        Debug.Log(Application.loadedLevel);
         if (Application.loadedLevel != 0)
         {
             if (GUI.Button(new Rect(Screen.width - (iconSize.x * 1.25f), (iconSize.y * 0.18f), iconSize.x, iconSize.y), "",
