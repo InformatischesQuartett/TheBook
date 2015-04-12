@@ -18,8 +18,8 @@ public static class Game {
     static Game()
     {
         Debug.Log("The Game");
-        _towns.Add(new Town("Town A"));
-        _towns.Add(new Town("Town B"));
-        _towns.Add(new Town("Town C"));
+        _towns.Add(new Town("Clayton"));
+        _towns.Add(new Town("Desertville"));
+        _towns.Add(new Town("Orienta"));
     }
 }
