@@ -9,6 +9,7 @@ using System.Collections;
 public static class Game {
 
     private static List<Town> _towns = new List<Town>();
+    public static Town CurrenTown;
 
     public static List<Town> GetTowns()
     {

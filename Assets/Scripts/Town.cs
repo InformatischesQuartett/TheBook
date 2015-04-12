@@ -56,7 +56,7 @@ public class Town {
     /// <summary>
     /// Rate of how many ppl of the town are folloing you.
     /// </summary>
-    public float HappinessRate { get; private set; }
+    public float HappinessRate { get; set; }
 
     /// <summary>
     /// is true the town is Convertet. the town is converted if 70% of the inhabitants are followers
