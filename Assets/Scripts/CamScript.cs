@@ -6,6 +6,7 @@ public class CamScript : MonoBehaviour {
 
     public Color BgColor;
     public Texture CoatOfArms;
+    public float StageZoom;
 
     private bool _showCoat;
 

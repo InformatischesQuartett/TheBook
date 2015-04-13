@@ -58,7 +58,10 @@ public class Person
         this.Violent = InitControllableViolent();
         this.Happines = 70; // 70% Happy as std
         this.InitBeliveList();
-        _book = GameObject.Find("Game").GetComponent<Book>();
+
+        var game = GameObject.Find("Game");
+        if (game != null)
+            _book = game.GetComponent<Book>();
     }
 
     /// <summary>
