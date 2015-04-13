@@ -1,44 +1,40 @@
 ﻿using UnityEngine;
-using System.Collections.Generic;
 using System.Linq;
 
 public class TownView : MonoBehaviour {
 
 	internal GameObject TownBase { get; private set; }
-	private List<Transform> _parallaxObjects;
+	private Transform[] _parallaxObjects;
 
-	// Use this for initialization
 	void Start () {
 		TownBase = GameObject.FindGameObjectWithTag ("Base");
+		var townPos = TownBase.transform.position;
 
-        var townWidth = GetWidth(TownBase);
-        var townPos = TownBase.transform.position;
+		// calc visible width of base layer
+        var boundL = Camera.main.ViewportToWorldPoint(new Vector3(0, 0, townPos.z));
+        var boundR = Camera.main.ViewportToWorldPoint(new Vector3(1, 0, townPos.z));
+		var wBaseVis = boundR.x - boundL.x;
 
-	    var leftBase = townPos + townWidth/2*Vector3.left;
-        var depthZ = Camera.main.WorldToScreenPoint(townPos).z;
-        var halfW = -Camera.main.ScreenToWorldPoint(new Vector3(0, 0, depthZ)).x;
+		// iterate through all layer objects
+		_parallaxObjects = GetComponentsInChildren<Transform>();
 
-        // move to left edge
-        var vec = townPos + townWidth / 2 * Vector3.left;
-        Camera.main.transform.position = new Vector3(vec.x, 0, 0);
-        Camera.main.transform.position += Vector3.right * halfW;
+		foreach (var parObj in _parallaxObjects.Select(obj => obj.gameObject))	
+        {
+			if (parObj.tag != "Base" && parObj.tag != "Parallax")
+			{
+				// set layers "layer" setting to his parent's value
+				parObj.layer = parObj.transform.parent.gameObject.layer;
+				
+				continue;
+			}
 
-		_parallaxObjects = this.GetComponentsInChildren<Transform> ().ToList();
-		_parallaxObjects.RemoveAt (0);
+			// calc necessary width for layer
+            var wLayer = GetWidth(parObj);
+            var dpFac = parObj.transform.position.z / townPos.z;
+			var sizeFac = 1 + ((dpFac - 1) * wBaseVis) / wLayer;
 
-	    for (int i = 0; i < _parallaxObjects.Count; i++)
-	    {
-	        var go = _parallaxObjects.ElementAt(i).gameObject;
-
-	        var priorVec = Camera.main.WorldToScreenPoint(go.transform.position);
-	        var leftEdge = Camera.main.ScreenToWorldPoint(new Vector3(0, priorVec.y, priorVec.z));
-	        var sizeFact = leftEdge.x/leftBase.x;
-
-	        go.transform.localScale = new Vector3(sizeFact, sizeFact, sizeFact);
+            parObj.transform.localScale = new Vector3(sizeFac, sizeFac, 1);
 	    }
-
-	    // set camera back to center
-        Camera.main.transform.position = new Vector3(0, 0, 0);
 	}
 
 	public float GetWidth(GameObject obj)
@@ -48,6 +44,6 @@ public class TownView : MonoBehaviour {
 
 	public int AmountOfParallax()
 	{
-		return _parallaxObjects.Count;
+		return _parallaxObjects.Length;
 	}
 }
