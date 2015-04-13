@@ -4,3 +4,4 @@ The book is a strategy puzzle adventure about the evolution of a religious ideol
 Download the GameJam Version:
 - [7zipped](http://github.com/hs-furtwangen/TheBook/blob/master/bin/thebook-gamejamversion.7z?raw=true)
 - [Selfextracting](https://github.com/hs-furtwangen/TheBook/blob/master/bin/thebook-gamejamversion.exe?raw=true)
+- [Source](https://github.com/hs-furtwangen/TheBook/tree/GameJamVersion)
