@@ -19,7 +19,7 @@ public class MapController : MonoBehaviour
 
     private void Start()
     {
-        Cursor.SetCursor(Config.Cursor, new Vector2(3, 1), CursorMode.ForceSoftware);
+        Cursor.SetCursor(Game.Config.Cursor, new Vector2(3, 1), CursorMode.ForceSoftware);
         
         _afflictionClayton = GameObject.Find("Clayton/Affliction");
         _afflictionDesertville = GameObject.Find("desertville/Affliction");
@@ -46,8 +46,8 @@ public class MapController : MonoBehaviour
         }
         else
         {
-            _cursorPosition.X += (int) (Input.GetAxis("Horizontal")*Config.MapMouseEmulationSpeed);
-            _cursorPosition.Y -= (int) (Input.GetAxis("Vertical")*Config.MapMouseEmulationSpeed);
+            _cursorPosition.X += (int) (Input.GetAxis("Horizontal")*Game.Config.MapMouseEmulationSpeed);
+            _cursorPosition.Y -= (int) (Input.GetAxis("Vertical")*Game.Config.MapMouseEmulationSpeed);
 
             MouseOperations.SetCursorPosition(_cursorPosition);
         }

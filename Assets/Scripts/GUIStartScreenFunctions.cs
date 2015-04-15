@@ -13,7 +13,7 @@ public class GUIStartScreenFunctions : MonoBehaviour
         _titleCanvas = GameObject.Find("Canvas Title");
         _creditsCanvas = GameObject.Find("Canvas Credits");
         _direction = -1;
-        _transitionSpeed = Config.MenuTransitionSpeed;
+        _transitionSpeed = Game.Config.MenuTransitionSpeed;
     }
 
     public void Update()

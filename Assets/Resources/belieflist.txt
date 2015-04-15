@@ -1,0 +1,14 @@
+[
+"animalLover",
+"farmer",
+"onlyFruits",
+"onlyMeat",
+"pacifists",
+"rogue",
+"shaman",
+"warrior",
+"worshipCats",
+"worshipFish",
+"worshipShadow",
+"worshipSunlight"
+]

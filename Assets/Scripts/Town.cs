@@ -83,13 +83,13 @@ public class Town {
     /// </summary>
     private void InitBeliefs()
     {
-        int size = Config.Beliefs.Count;
+        int size = Game.Config.Beliefs.Count;
         int negBeliefs = 0;
         int maxNegBeliefs = 2;
         while (BeliefsList.Count != _numberBelieves)
         {
             bool isDuplicate = false;
-            var candidate = Config.Beliefs[Random.Range(0, size)];
+            var candidate = Game.Config.Beliefs[Random.Range(0, size)];
             int candidateNegBeliefs = 0;
             //empty List, first entry
             if (BeliefsList.Count == 0)

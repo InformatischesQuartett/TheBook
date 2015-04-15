@@ -77,7 +77,7 @@ public class Person
         while (BeliefList.Count != numberBeliefs)
         {
             bool isDuplicate = false;
-            var candidate = Config.Beliefs[Random.Range(0, HomeTown.GetBeliefs().Count)];
+            var candidate = Game.Config.Beliefs[Random.Range(0, HomeTown.GetBeliefs().Count)];
             if (BeliefList.Count == 0)
             {
                 BeliefList.Add(candidate);

@@ -31,7 +31,7 @@ public class CharController : MonoBehaviour
 
     private void Start()
     {
-        _speed = Config.CharacterWalkSpeed;
+        _speed = Game.Config.CharacterWalkSpeed;
 
         _townController = GameObject.Find("TownController");
         _townScript = _townController.GetComponent<TownView>();

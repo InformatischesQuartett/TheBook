@@ -58,7 +58,7 @@ public class Book : MonoBehaviour {
         //adding and activating the rule of the rules
         _ruleList.Add(Game.MasterRule);
         Game.MasterRule.isActive = true;
-        foreach (var belief in Config.Beliefs)
+        foreach (var belief in Game.Config.Beliefs)
         {
             _ruleList.Add(new Rule(belief.rule, belief.beliefName));
         }
