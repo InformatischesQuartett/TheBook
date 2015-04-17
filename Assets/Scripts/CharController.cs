@@ -88,7 +88,7 @@ public class CharController : MonoBehaviour
         var rightBaseScreen = Camera.main.WorldToScreenPoint(_townPos + _townWidth/2*Vector3.right);
 
         var allowWalk = (Input.GetAxis("Horizontal") < 0 && transform.position.x > _startX - _halfW/4.0f);
-        allowWalk |= (Input.GetAxis("Horizontal") > 0 && rightBaseScreen.x > Screen.width);
+        allowWalk |= (Input.GetAxis("Horizontal") > 0 && rightBaseScreen.x > Screen.width && _playerState != PlayerState.Speech);
 
         if (allowWalk)
         {
@@ -131,9 +131,6 @@ public class CharController : MonoBehaviour
                 {
                     var maxZoom = Camera.main.GetComponent<CamScript>().StageZoom;
                     Camera.main.transform.position = new Vector3(camPos.x, camPos.y, maxZoom);
-
-                    this.GetComponent<Animator>().SetBool("Walk", false);
-                    this.GetComponent<Animator>().SetBool("Talk", true);
                 }
             }
         }

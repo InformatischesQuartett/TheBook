@@ -1,0 +1,121 @@
+fileFormatVersion: 2
+guid: 0111461062a034f49aa2844194ca3fa0
+timeCreated: 1429263768
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: crowd_0
+    21300002: crowd_1
+    21300004: crowd_2
+    21300006: crowd_3
+    21300008: crowd_4
+    21300010: crowd_5
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 8192
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 1000
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: crowd_0
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 85
+        width: 343
+        height: 857
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 18}
+    - name: crowd_1
+      rect:
+        serializedVersion: 2
+        x: 561
+        y: 96
+        width: 352
+        height: 850
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: crowd_2
+      rect:
+        serializedVersion: 2
+        x: 1372
+        y: 81
+        width: 422
+        height: 961
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: crowd_3
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 3231
+        width: 301
+        height: 878
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: crowd_4
+      rect:
+        serializedVersion: 2
+        x: 517
+        y: 3243
+        width: 399
+        height: 854
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: crowd_5
+      rect:
+        serializedVersion: 2
+        x: 1340
+        y: 3225
+        width: 454
+        height: 994
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
