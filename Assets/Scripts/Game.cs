@@ -1,4 +1,6 @@
 ﻿using System.Collections.Generic;
+using System.IO;
+using System.Xml.Serialization;
 using Newtonsoft.Json;
 using UnityEngine;
 
@@ -14,11 +16,15 @@ public static class Game
     private static readonly List<Town> _towns = new List<Town>();
     public static Rule MasterRule = new Rule("Thou shalt not kill.", "MasterRule");
     public static Town CurrenTown;
+    public static Config testConfig;
 
     static Game()
     {
         LoadConfig();
         LoadBeliefs();
+        LoadConfigXML();
+
+        Debug.Log(testConfig.CharacterWalkSpeed);
 
         Debug.Log("The Game");
         _towns.Add(new Town("Clayton"));
@@ -43,6 +49,13 @@ public static class Game
         Config = JsonConvert.DeserializeObject<ConfigSet>(configfileTa.text);
 
         _config.Cursor = (Texture2D)Resources.Load("cursor");
+    }
+
+    private static void LoadConfigXML()
+    {
+        var serializer = new XmlSerializer(typeof(Config));
+        var configfileTa = Resources.Load<TextAsset>(_configFile + "2");
+        testConfig = serializer.Deserialize(new StringReader(configfileTa.text)) as Config;
     }
 
     private static void LoadBeliefs()

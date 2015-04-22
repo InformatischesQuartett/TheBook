@@ -1,0 +1,5 @@
+<Config>
+	<CharacterWalkSpeed>2.0</CharacterWalkSpeed>
+	<MapMouseEmulationSpeed>10</MapMouseEmulationSpeed>
+	<MenuTransitionSpeed>6</MenuTransitionSpeed>
+</Config>
